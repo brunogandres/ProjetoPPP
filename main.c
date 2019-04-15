@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*o gandres chupa piças*/
+
 typedef struct PdI *LPdI;
 typedef struct PdI{
     char nome[50], descricao[200], horario[25];
