@@ -41,23 +41,10 @@ void procura_lista (List lista, char *chave, List *ant, List *actual);
 List pesquisa_lista (List lista, char *it);
 
 int main() {
-    lerficheiro();
+    ordemalfabetica();
 }
 
 
-
-
-void lerficheiro()
-{
-    FILE *cidades = fopen("C:\\Users\\Bruno Gandres\\Desktop\\Projeto\\Cidades.txt", "r");
-    int i;
-    char leitura[50];
-    for(i = 0; fgets(leitura, 100, cidades); i++){
-        printf("%s", leitura);
-    }
-    fclose(cidades);
-
-}
 
 
 /* REGISTO E GUARDA NUM FICHEIRO*/
@@ -85,12 +72,22 @@ void registo()
 
     fclose(userdados);
 }
-void ordemalfabetica()
-{
+void ordemalfabetica() {
     List lista;
+    FILE *cidades = fopen("C:\\Users\\Bruno Gandres\\Desktop\\Projeto\\Cidades.txt", "r");
+    int i, len;
+    char leitura[50];
     lista = cria_lista();
-    
+    for (i = 0; fgets(leitura, 256, cidades); i++) {
+        if(leitura[0] == '*'){
+            insere_lista(lista, leitura);
+        }
+    }
+    fclose(cidades);
+    imprime_lista(lista);
 }
+
+
 
 /*CRIAR LISTA LIGADA*/
 List cria_lista (void){
