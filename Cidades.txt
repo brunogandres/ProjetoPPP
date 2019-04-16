@@ -3,7 +3,7 @@ Museu Machado Castro
 Parque Verde
 Universidade (POLO II)
 *Porto
-Estádio Do Dragao
+Estadio Do Dragao
 Avenida Dos Aliados
 Ponte Luis I
 *Lisboa
@@ -15,12 +15,12 @@ Santuario de Santa Luzia
 Castelo de Santiago da Barra
 Igreja da Srª d’Agonia
 *Chaves
-Ponte Romanda
+Ponte Romana
 Castelo de Chaves
 Igreja de Santa Maria Maior
 *Braga
 Estádio Municipal de Braga
-Sé de Braga
+Se de Braga
 Avenoda Central
 *Aveiro
 Ria de Aveiro
