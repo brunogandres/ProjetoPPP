@@ -12,7 +12,7 @@ typedef struct cidade *Lcidade;
 typedef struct cidade{
     char nome_cidade[50], escricao_cidade[50];
     LPdI pontos;
-    Lcidade proximo;
+    Lcidade next;
 }Cidades;
 
 typedef struct User *LUser;
@@ -21,27 +21,19 @@ typedef struct User{
     LUser next;
 }UserData;
 
-typedef struct lnode *List;
-typedef struct lnode {
-    char *info;
-    List next;
-} List_node;
 
 /*cabeçalhos*/
 void lerficheiro();
 void registo();
 void ordemalfabetica();
-List cria_lista (void);
-List destroi_lista (List lista);
-void elimina_lista (List lista, char *it);
-void insere_lista (List lista, char *it);
-void imprime_lista (List lista);
-int lista_vazia(List lista);
-void procura_lista (List lista, char *chave, List *ant, List *actual);
-List pesquisa_lista (List lista, char *it);
-void percorrelista(List_node *head);
+Lcidade cria_lista_CIDADES(void);
+int lista_vazia_CIDADES(Lcidade lista);
+void procura_lista_CIDADES(Lcidade lista, char *chave, Lcidade *ant, Lcidade *actual);
+void insere_lista_CIDADES(Lcidade lista, char *it);
+void imprime_lista_CIDADES (Lcidade lista);
 
-int main() {
+
+        int main() {
 
     ordemalfabetica();
 }
@@ -76,113 +68,73 @@ void registo()
 
 }
 void ordemalfabetica() {
-    List lista;
+    Lcidade lista;
     int i, j, len;
-    lista = cria_lista();
+    lista = cria_lista_CIDADES();
     FILE *cidades = fopen("C:\\Users\\Utilizador\\Desktop\\Projeto\\Cidades.txt", "r");
 
     char leitura[50];
 
     for (i = 0; fgets(leitura, 256, cidades); i++) {
         if(leitura[0] == '*'){
-            insere_lista(lista, leitura + 1);
+            insere_lista_CIDADES(lista, leitura + 1);
             }
         }
     fclose(cidades);
-    imprime_lista(lista);
+    imprime_lista_CIDADES(lista);
 }
 
 
-void percorrelista(List_node *head){
-    List_node * current = head;
 
-    while (current != NULL) {
-
-        printf("%s\n", current->info);
-        current = current->next;
-    }
-}
 
 
 /*CRIAR LISTA LIGADA*/
-List cria_lista (void)
-{
-    List aux;
-    aux = (List) malloc (sizeof (List_node));
-
+Lcidade cria_lista_CIDADES (void) {
+    Lcidade aux;
+    aux = (Lcidade) malloc (sizeof (Cidades));
     if (aux != NULL) {
-        aux->info = ' ';
+        aux->nome_cidade = ' ';
         aux->next = NULL;
     }
-
     return aux;
-}List destroi_lista (List lista){
-    List temp_ptr;
-    while (lista_vazia (lista) == 0) {
+}
+Lcidade destroi_lista_CIDADES (Lcidade lista) {
+    Lcidade temp_ptr;
+    while (lista_vazia_CIDADES(lista) == 0) {
         temp_ptr = lista;
-        lista= lista->next;
-        free (temp_ptr);
+        lista= lista->next; free (temp_ptr);
     }
     free(lista);
     return NULL;
 }
-void elimina_lista (List lista, char *it){
-    List ant;
-    List actual;
-    procura_lista (lista, it, &ant, &actual);
-    if (actual != NULL) {
-        ant->next = actual->next;
-        free (actual);
-    }
+int lista_vazia_CIDADES(Lcidade lista) {
+    return (lista->next == NULL ? 1 : 0);
 }
-void insere_lista (List lista, char *it)
-{
-    List no;
-    List ant, inutil;
-
-    no = (List) malloc (sizeof (List_node));
-
+void procura_lista_CIDADES (Lcidade lista, char *chave, Lcidade *ant, Lcidade *actual) {
+    *ant = lista;
+    *actual = lista->next;
+    while ((*actual) != NULL && strcmp((*actual)->nome_cidade, chave) < 0) {
+        *ant = *actual;
+        *actual = (*actual)->next;
+    }
+    if ((*actual) != NULL && strcmp((*actual)->nome_cidade, chave))
+        *actual = NULL;
+}
+void insere_lista_CIDADES(Lcidade lista, char *it) {
+    Lcidade no;
+    Lcidade ant, inutil;
+    no = (Lcidade) malloc (sizeof (Cidades));
     if (no != NULL) {
-        no->info = (char*) malloc (strlen(it) * sizeof(char));
-        strcpy(no->info, it);
-        procura_lista(lista, it, &ant, &inutil);
+        strcpy(no->nome_cidade, it);
+        procura_lista_CIDADES (lista, it, &ant, &inutil);
         no->next = ant->next;
         ant->next = no;
     }
 }
-void imprime_lista (List lista)
-{
-    List l = lista->next; /* Salta o header */
-
-    while (l)
-    {
-        printf("%s ", l->info);
+void imprime_lista_CIDADES (Lcidade lista) {
+    Lcidade l = lista->next; /* Salta o header */
+    while (l) {
+        printf("%s ", l->nome_cidade);
         l=l->next;
     }
-}
-int lista_vazia(List lista){
-    return (lista->next == NULL ? 1 : 0);
-}
-void procura_lista (List lista, char *chave, List *ant, List *actual)
-{
-    *ant = lista;
-    *actual = lista->next;
-
-    while ((*actual) != NULL && strcmp((*actual)->info, chave) == -1)
-    {
-        *ant = *actual;
-        *actual = (*actual)->next;
-    }
-
-    if ((*actual) != NULL && strcmp((*actual)->info, chave) != 0)
-        actual = NULL;
-}
-List pesquisa_lista (List lista, char *it)
-{
-    List ant;
-    List actual;
-
-    procura_lista (lista, it, &ant, &actual);
-
-    return (actual);
 }
