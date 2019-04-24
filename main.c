@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*o gandres chupa piças*/
-
 typedef struct PdI *LPdI;
 typedef struct PdI{
     char nome[50], descricao[200], horario[25];
@@ -41,8 +39,10 @@ void imprime_lista (List lista);
 int lista_vazia(List lista);
 void procura_lista (List lista, char *chave, List *ant, List *actual);
 List pesquisa_lista (List lista, char *it);
+void percorrelista(List_node *head);
 
 int main() {
+
     ordemalfabetica();
 }
 
@@ -65,7 +65,7 @@ void registo()
 
 
 
-    userdados = fopen("C:\\Users\\Bruno Gandres\\Desktop\\Projeto\\Dados.txt", "a");
+    userdados = fopen("C:\\Users\\Utilizador\\Desktop\\Projeto\\Dados.txt", "a");
     fprintf(userdados, "%s|", user1.nome);
     fprintf(userdados, "%s|", user1.morada);
     fprintf(userdados, "%s|", user1.data_nascimento);
@@ -73,35 +73,50 @@ void registo()
     fprintf(userdados, "\n");
 
     fclose(userdados);
+
 }
 void ordemalfabetica() {
     List lista;
-    FILE *cidades = fopen("C:\\Users\\Bruno Gandres\\Desktop\\Projeto\\Cidades.txt", "r");
-    int i, len;
-    char leitura[50];
+    int i, j, len;
     lista = cria_lista();
+    FILE *cidades = fopen("C:\\Users\\Utilizador\\Desktop\\Projeto\\Cidades.txt", "r");
+
+    char leitura[50];
+
     for (i = 0; fgets(leitura, 256, cidades); i++) {
         if(leitura[0] == '*'){
-            insere_lista(lista, leitura);
+            insere_lista(lista, leitura + 1);
+            }
         }
-    }
     fclose(cidades);
     imprime_lista(lista);
 }
 
 
+void percorrelista(List_node *head){
+    List_node * current = head;
+
+    while (current != NULL) {
+
+        printf("%s\n", current->info);
+        current = current->next;
+    }
+}
+
 
 /*CRIAR LISTA LIGADA*/
-List cria_lista (void){
+List cria_lista (void)
+{
     List aux;
     aux = (List) malloc (sizeof (List_node));
+
     if (aux != NULL) {
-        aux->info = 0;
+        aux->info = ' ';
         aux->next = NULL;
     }
+
     return aux;
-}
-List destroi_lista (List lista){
+}List destroi_lista (List lista){
     List temp_ptr;
     while (lista_vazia (lista) == 0) {
         temp_ptr = lista;
@@ -120,21 +135,27 @@ void elimina_lista (List lista, char *it){
         free (actual);
     }
 }
-void insere_lista (List lista, char *it){
+void insere_lista (List lista, char *it)
+{
     List no;
     List ant, inutil;
+
     no = (List) malloc (sizeof (List_node));
+
     if (no != NULL) {
-        no->info = (char *) malloc (sizeof(char) * strlen(it));
-        strcpy(no -> info, it);
-        procura_lista (lista, it, &ant, &inutil);
+        no->info = (char*) malloc (strlen(it) * sizeof(char));
+        strcpy(no->info, it);
+        procura_lista(lista, it, &ant, &inutil);
         no->next = ant->next;
         ant->next = no;
     }
 }
-void imprime_lista (List lista){
+void imprime_lista (List lista)
+{
     List l = lista->next; /* Salta o header */
-    while (l){
+
+    while (l)
+    {
         printf("%s ", l->info);
         l=l->next;
     }
@@ -142,18 +163,26 @@ void imprime_lista (List lista){
 int lista_vazia(List lista){
     return (lista->next == NULL ? 1 : 0);
 }
-void procura_lista (List lista, char *chave, List *ant, List *actual){
-    *ant = lista; *actual = lista->next;
-    while (((*actual) != NULL && strcmp((*actual)->info, chave)) == -1){
+void procura_lista (List lista, char *chave, List *ant, List *actual)
+{
+    *ant = lista;
+    *actual = lista->next;
+
+    while ((*actual) != NULL && strcmp((*actual)->info, chave) == -1)
+    {
         *ant = *actual;
         *actual = (*actual)->next;
     }
+
     if ((*actual) != NULL && strcmp((*actual)->info, chave) != 0)
-        actual = NULL; /* Se elemento não encontrado*/
+        actual = NULL;
 }
-List pesquisa_lista (List lista, char *it){
+List pesquisa_lista (List lista, char *it)
+{
     List ant;
     List actual;
+
     procura_lista (lista, it, &ant, &actual);
+
     return (actual);
 }
