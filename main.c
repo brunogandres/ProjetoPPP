@@ -10,7 +10,7 @@ typedef struct PdI{
 
 typedef struct cidade *Lcidade;
 typedef struct cidade{
-    char nome_cidade[50], escricao_cidade[50];
+    char nome_cidade[100], escricao_cidade[50];
     LPdI pontos;
     Lcidade next;
 }Cidades;
@@ -33,7 +33,7 @@ void insere_lista_CIDADES(Lcidade lista, char *it);
 void imprime_lista_CIDADES (Lcidade lista);
 
 
-        int main() {
+int main() {
 
     ordemalfabetica();
 }
@@ -93,7 +93,7 @@ Lcidade cria_lista_CIDADES (void) {
     Lcidade aux;
     aux = (Lcidade) malloc (sizeof (Cidades));
     if (aux != NULL) {
-        aux->nome_cidade = ' ';
+        strcpy(aux->nome_cidade, "");
         aux->next = NULL;
     }
     return aux;
