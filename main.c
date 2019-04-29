@@ -90,13 +90,13 @@ void ordemalfabetica() {
 
 
     for (i = 0; fgets(leitura, 256, cidades)!=NULL; i++){
-      //  printf("ler -> %s", leitura);
+        //  printf("ler -> %s", leitura);
         if (leitura[0] == '*') {
             noLocal = insere_lista_CIDADES(lista_cidades, leitura + 1);
-         //   printf("noLocal -> %s", noLocal->nome_cidade);
+            //   printf("noLocal -> %s", noLocal->nome_cidade);
         }
         else {
-        //    printf("noPDI -> %p",noLocal->pontos);
+            //    printf("noPDI -> %p",noLocal->pontos);
             insere_lista_PDIS(noLocal->pontos, leitura+1);
 
         }
