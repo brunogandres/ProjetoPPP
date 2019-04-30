@@ -40,18 +40,15 @@ void insere_lista_PDIS (LPdI lista, char *it);
 
 
 
-/*MAIN*/
+//  Main
 
 int main() {
-    //main criar lista cidades
-    //
-    ordemalfabetica();
-    //
+    Lcidade lista_cidades;
+    lista_cidades = cria_lista_CIDADES();
+
+    ordemalfabetica(lista_cidades);
+
 }
-
-
-
-//funçaco carregar ficheiro e recebe por parametro a lista
 /* REGISTO E GUARDA NUM FICHEIRO*/
 void registo()
 {
@@ -78,45 +75,30 @@ void registo()
     fclose(userdados);
 
 }
-void ordemalfabetica() {
-    Lcidade lista_cidades;
+void ordemalfabetica(Lcidade lista) {
     int i;
-    lista_cidades = cria_lista_CIDADES();//criar listas no main
-
-    FILE *cidades = fopen("C:\\Users\\Utilizador\\Desktop\\Projeto\\Cidades.txt", "r");
     char leitura[256];
+    FILE *cidades = fopen("C:\\Users\\Utilizador\\Desktop\\Projeto\\Cidades.txt", "r");
 
-    Lcidade noLocal = NULL;
+    Lcidade noLocal = NULL;//ponteiro para correr cada nó da lista de cidades
 
 
     for (i = 0; fgets(leitura, 256, cidades)!=NULL; i++){
-        //  printf("ler -> %s", leitura);
         if (leitura[0] == '*') {
-            noLocal = insere_lista_CIDADES(lista_cidades, leitura + 1);
-            //   printf("noLocal -> %s", noLocal->nome_cidade);
+            noLocal = insere_lista_CIDADES(lista, leitura + 1);
         }
         else {
-            //    printf("noPDI -> %p",noLocal->pontos);
             insere_lista_PDIS(noLocal->pontos, leitura+1);
-
         }
-
-
     }
-    imprime_lista_CIDADES(lista_cidades);
+    imprime_lista_CIDADES(lista);
     fclose(cidades);
 }
-//criar fucao em que envia lista  e o nodo fincao(lista, nodo)
 
 
 
 
-
-/*LISTA LIGADA PARA AS CIDADES*/
-/*Lcidade pesquisa_lista (List lista, ITEM_TYPE it) {
-    List ant; List actual;
-    procura_lista (lista, it, &ant, &actual);
-    return (actual);*/
+//Lista ligada para as cidades
 
 Lcidade cria_lista_CIDADES (void) {
     Lcidade aux;
@@ -171,6 +153,7 @@ void imprime_lista_CIDADES (Lcidade lista) {
         l=l->next;
     }
 }
+
 
 /*LISTA LIGADA PARA OS PONTOS DE INTERESSE*/
 
