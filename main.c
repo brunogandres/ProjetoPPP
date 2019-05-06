@@ -11,24 +11,25 @@ typedef struct PdI{
 
 typedef struct cidade *Lcidade;
 typedef struct cidade{
-    char nome_cidade[100], descricao_cidade[50];
+    char nome_cidade[100];
     LPdI pontos;
     Lcidade next;
 }Cidades;
 
 
-typedef struct User2 *LUser2;
-typedef struct User2{
-    char morada[50], data_nascimento[15], telemovel[50];
-    LUser2 next;
-}UserData2;
 
 typedef struct User *LUser;
 typedef struct User{
     char nome[50], morada[50], data_nascimento[15], telemovel[50];
-    LUser2 detalhes;
+    Lcidade prefLocal1;
+    Lcidade prefLocal2;
+    Lcidade prefLocal3;
+    LPdI prefPontos;
+    LPdI hot;
     LUser next;
 }UserData;
+
+
 
 
 /*cabeçalhos*/
