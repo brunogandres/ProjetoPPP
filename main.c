@@ -150,7 +150,7 @@ int menu(LUser user) {
         printf("%s", user->nome);
     printf("\n********************************************************");
     printf("\n1. Registar Utilizadores     DONE!");
-    printf("\n2. Efetuar Login ");
+    printf("\n2. Efetuar Login   DONE! ");
     printf("\n3. Listar dados do utilizador   DONE!");
     printf("\n4. Alterar dados do utilizador"); // AQui dentro pode
     printf("\n5. Alterar PDI HOT do utilizador    DONE");
