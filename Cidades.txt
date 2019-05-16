@@ -143,34 +143,34 @@ $10:00-17:30
 
 *Londres
 @Wembley
-#
-$
+#Com capacidade para abrigar 90.000 espectadores, é o maior estádio do Reino Unido e 2º maior estádio da Europa, sendo ultrapassado somente pelo Camp Nou, em Barcelona.
+$08:00-20:00
 @Big Ben
-#
+#O edificio possui o segundo maior relógio de quatro faces do mundo foi construída em estilo neogótico e tem 96 metros de altura.
 $00:00-24:00
 @Palácio de Buckingham
-#
-$
+#O Palácio de Buckingham é a residência oficial e principal local de trabalho do Monarca do Reino Unido em Londres.O palácio é frequentemente o centro de ocasiões de estado e hospitalidade real
+$09:30-19:30
 @London Eye
-#
-$
+#E uma roda-gigante de observação da cidade de Londres. London Eye é considerada como um ponto turístico singular em Londres. Isso não apenas pela ousadia de seu projeto, mas também pelas dificuldades que a acompanharam desde quando foi concebida até sua inauguração.
+$10:00-20:30
 @Palácio de Westminster
-#
-$
+#O palácio fica situado na margem Norte do rio Tâmisa próximo de outros edifícios governamentais ao longo da Whitehall.
+$09:00-17:00
 @Madame Tussauds
-#
-$
+#Cadeia de museus com realistas réplicas em cera de celebridades e de ícones históricos em galerias temáticas.
+$09:00-18:00
 
 *Tokyo
-@Torre de Tóquio
+@Tokyo Tower
 #A Torre de Tóquio é uma torre de comunicação e um belveder localizado no distrito Shiba-koen em Minato, Tóquio, Japão. Com 333 metros de altura, é a segunda maior estrutura artificial do Japão
-$
+$09:00-23:00
 @Palácio Imperial do Japão
-#
-$
+#Residência oficial do Imperador do Japão.
+$09:00-17:00
 @Hamarikyu Gardens
-#
-$
+#Parque público em Chuo. Localizado na foz do Rio Sumida o parque é um jardim paisagístico de 250.165 m² ao redor da Lagoa Shioiri, o próprio parque cercado por um fosso de água do mar preenchido pela Baía de Tóquio
+$09:00-16:30
 
 *Paris
 @Torre Eiffel
@@ -221,5 +221,3 @@ $
 @
 #
 $
-
-*
