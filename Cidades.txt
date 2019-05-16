@@ -8,6 +8,15 @@ $00:00-24:00
 @Polo II da Universidade de Coimbra
 #Local onde se encontram sedeadas a maior o parte dos cursos de engenharia da UC.
 $08:00-20:00
+@Escadas do Quebra-costas
+#
+$00:00-24:00
+@Praca da Republica
+#
+$00:00-24:00
+@O Moelas
+#Estabelecimento de diversao noturna frequentado principalmente pelos estudantes de engenharia informatica, dado estar localizado ao lado da se velha encontra-se protegido contra qualquer forca maligna q o tente assombrar.
+$23:00-04:00
 
 *Porto
 @Estadio Do Dragao
@@ -88,32 +97,49 @@ $00:00-24:00
 @Santa Monica Pier
 #O pontao tem uma entrada iconica com mais de 100 anos de existencia, sendo muito popular entre os residentes e os visitantes.No parque ha tambem um carrossel original dos anos 20, um aquário, lojas, artistas e vários restaurantes. O extremo oeste do pontao é uma localização popular para a pratica da pesca.
 $00:00-24:00
-@Starline Tours
-#
-$
+@Hollywood Walk of Fame
+#Passeio ao longo das ruas Hollywood Boulevard e Vine Street constituído por mais de 2.000 lajes com estrelas, fazendo menção a celebridades, pela Câmara do Comércio de Hollywood, pela sua contribuicao para a indústria do entretenimento.
+$00:00-24:00
 @Observatorio Griffith
-#
-$
+#Está localizado no Parque Griffith e é um espaco muito procurado tanto por turistas como pelos locais. O observatório tem o total de 12.200 metros quadrados, território esse que foi doado pelo coronel Griffith dai o seu nome.
+$12:00–22:00
 @Getty Center
-#
-$
+#E um museu de arte da Califórnia que em 2016 recebeu mais de dois milhões de visitantes.
+$10:00-17:30
+@UCLA Campus
+#Universidade americana localizada na região de Westwood. Segunda universidade do sistema Universitario da Califórnia encontra-se no topo do ranking das universidade nos USA e está entre as melhores do mundo. 
+$08:00-20:00
+
+*Silicon Valley
+@Googleplex
+#Complexo de edifícios que formam a sede da Google. Para alem disso dinamiza varios eventos relacionados com a programacao com o objetivo de estimular os mais novos a programar bem como descobrir novos talentos.
+$10:00-18:30
+@The Tech Museum of Innovation
+#Museu de ciência e tecnologia em Silicon Valley é considerado um dos principais museus do seu genero dos Estados Unidos
+$10:00-17:00
+@Intel Museum
+#Localizado na sede da Intel tem exibições de produtos e história da Intel, bem como tecnologia de semicondutores em geral. Está aberto ao público com entrada gratuita.
+$09:00-18:00
+@Museu da História do Computador
+#Foi fundado em 1996 em Moutain View. Dedica-se a mostrar a revolução dos computadores no mundo e o impacto que ela gerou na sociedade.
+$10:00-17:00
 
 *New York
 @Madison Square Garden
 #Entitulado de a "arena mais famosa do mundo", este local é palco de partidas da NBA e NHL, concertos bem como outros eventos.
 $09:30-15:00
 @Estatua da Liberdade
-#
-$11:30-15:30
+#Escultura neoclássica colossal localizada na ilha da Liberdade no porto de New York, oferecida por Franca como presente pela ajuda dos americanos na 2. Grande Guerra.
+$08:30-16:00
 @Central Park
-#
-$
+#Grande parque dentro da cidade de Nova Iorque. Possui uma área de 843 acres e é visto como um oásis dentro da grande floresta de arranha-céus  que existe na região.
+$06:00-01:00
 @Rockefeller Center
-#
-$
+#Complexo de 19 edifícios comerciais que ocupam uma área de 89 000 m² entre as ruas 48th e 51st. Construído pela família Rockefeller, está localizado no centro de Midtown Manhattan.
+$00:00-24:00
 @Museu Solomon R. Guggenheim
-#
-$
+#Famoso pelas linhas curvas da fachada,representando a arquitetura moderna em sua forma mais orgânica. O museu abriga importante coleção de arte moderna amealhadas pelo seu fundador e pela sua sobrinha no começo do século XX com um incalculável valor artístico e monetário.
+$10:00-17:30
 
 *Londres
 @Wembley
@@ -121,7 +147,7 @@ $
 $
 @Big Ben
 #
-$
+$00:00-24:00
 @Palácio de Buckingham
 #
 $
@@ -145,3 +171,55 @@ $
 @Hamarikyu Gardens
 #
 $
+
+*Paris
+@Torre Eiffel
+#
+$
+@Arco do Triunfo
+#
+$
+@Louvre
+#
+$
+@Palacio de Versalles
+#
+$
+@
+#
+$
+
+*Berlin
+@
+#
+$
+@
+#
+$
+@
+#
+$
+
+*Madrid
+@
+#
+$
+@
+#
+$
+@
+#
+$
+
+*Barcelona
+@Camp Nou
+#
+$
+@
+#
+$
+@
+#
+$
+
+*
