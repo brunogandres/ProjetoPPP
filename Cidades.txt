@@ -1,223 +1,96 @@
 *Coimbra
-@Museu Machado Castro
-#E um dos mais importantes museus de Belas-Artes de Portugal. Foi assim denominado em homenagem ao escultor conimbricense Machado de Castro. O seu espólio inclui importantes núcleos de escultura, pintura e Artes decorativas. Localiza-se no Largo Dr. José Rodrigues.
-$10:00-18:00
-@Parque Verde
-#Parque na margem do rio com quase 4 quilómetros de espacos verdes que contempla tambem uma ciclovia de extensão equivalente;
-$00:00-24:00
-@Polo II da Universidade de Coimbra
-#Local onde se encontram sedeadas a maior o parte dos cursos de engenharia da UC.
-$08:00-20:00
-@Escadas do Quebra-costas
-#
-$00:00-24:00
-@Praca da Republica
-#
-$00:00-24:00
-@O Moelas
-#Estabelecimento de diversao noturna frequentado principalmente pelos estudantes de engenharia informatica, dado estar localizado ao lado da se velha encontra-se protegido contra qualquer forca maligna q o tente assombrar.
-$23:00-04:00
+-Museu Machado Castro|E um dos mais importantes museus de Belas-Artes de Portugal. Foi assim denominado em homenagem ao escultor conimbricense Machado de Castro. O seu espólio inclui importantes núcleos de escultura, pintura e Artes decorativas. Localiza-se no Largo Dr. José Rodrigues.|10:00-18:00
+-Parque Verde|Parque na margem do rio com quase 4 quilómetros de espacos verdes que contempla tambem uma ciclovia de extensão equivalente;|00:00-24:00
+-Polo II da Universidade de Coimbra|Local onde se encontram sedeadas a maior o parte dos cursos de engenharia da UC.|08:00-20:00
+-Escadas do Quebra-costas|      |00:00-24:00
+-Praca da Republica|      |00:00-24:00
+-O Moelas|Estabelecimento de diversao noturna frequentado principalmente pelos estudantes de engenharia informatica, dado estar localizado ao lado da se velha encontra-se protegido contra qualquer forca maligna q o tente assombrar.|23:00-04:00
 
 *Porto
-@Estadio Do Dragao
-#Casa do FC Porto, um dos maiores clubes de Portugal e da Europa
-$10:00-19:00
-@Avenida Dos Aliados
-#E um importante arruamento na Baixa da cidade do Porto. É a principal avenida e o centro da cidade do Porto.
-$00:00-24:00
-@Ponte Luis I
-#Ponte em estrutura metálica com dois tabuleiros, construída entre os anos 1881 e 1888 e desenhada por Gustave Eiffel, que liga as cidades do Porto e Vila Nova de Gaia.
-$00:00-24:00
+-Estadio Do Dragao|Casa do FC Porto, um dos maiores clubes de Portugal e da Europa|10:00-19:00
+-Avenida Dos Aliados|E um importante arruamento na Baixa da cidade do Porto. É a principal avenida e o centro da cidade do Porto.|00:00-24:00
+-Ponte Luis I|Ponte em estrutura metálica com dois tabuleiros, construída entre os anos 1881 e 1888 e desenhada por Gustave Eiffel, que liga as cidades do Porto e Vila Nova de Gaia.|00:00-24:00
 
 *Lisboa
-@Torre de Belem
-#Este monumento localizado em Belem e um icone da arquitetura do reinado de D. Manuel I, numa síntese entre a torre de menagem medieval e o baluarte moderno, onde se dispunham peças de artilharia.
-$10:00-18:30
-@Mosteiro dos Jeronimos
-# E um mosteiro portugues da Ordem de São Jerónimo construído no século XVI. Situa-se na freguesia de Belem, em Lisboa. Tem o estatuto de Panteão Nacional, desde 2016.
-$10:00-18:30
-@Praca do Comercio
-#Antes chamada de Terreiro do Paço, e uma praça Lisboeta situada junto ao rio Tejo. Os edificios que anteriormente eram usados como palacio dos reis de Portugal sao agora usasdos por departamentos governamentais.
-$00:00-24:00
+-Torre de Belem|Este monumento localizado em Belem e um icone da arquitetura do reinado de D. Manuel I, numa síntese entre a torre de menagem medieval e o baluarte moderno, onde se dispunham peças de artilharia.|10:00-18:30
+-Mosteiro dos Jeronimos|E um mosteiro portugues da Ordem de São Jerónimo construído no século XVI. Situa-se na freguesia de Belem, em Lisboa. Tem o estatuto de Panteão Nacional, desde 2016.|10:00-18:30
+-Praca do Comercio|Antes chamada de Terreiro do Paço, e uma praça Lisboeta situada junto ao rio Tejo. Os edificios que anteriormente eram usados como palacio dos reis de Portugal sao agora usasdos por departamentos governamentais.|00:00-24:00
 
 *Viana do Castelo
-@Santuario de Santa Luzia
-#Santuario cristao catolico localizado no alto do monte de Santa Luzia, na cidade de Viana do Castelo.
-$08:00-19:00
-@Castelo de Santiago da Barra
-#Localiza-se na freguesia de Monserrate, na cidade de Viana do Castelo, em Portugal. Tinha a função de defesa do ancoradouro e povoação de Viana da Foz, atual Viana do Castelo.
-$00:00-24:00
-@Santuario da Sr. d.Agonia
-#E localizada no Campo da Agonia em Viana do Castelo. Está relacionada com a tradição da Romaria de Nossa Senhora da Agonia ligada a devoçao dos pescadores, que tem lugar anualmente no mes de agosto.
-$08:00-12:00 / 13:00-17:00
+-Santuario de Santa Luzia|Santuario cristao catolico localizado no alto do monte de Santa Luzia, na cidade de Viana do Castelo.|08:00-19:00
+-Castelo de Santiago da Barra|Localiza-se na freguesia de Monserrate, na cidade de Viana do Castelo, em Portugal. Tinha a função de defesa do ancoradouro e povoação de Viana da Foz, atual Viana do Castelo.|00:00-24:00
+-Santuario da Sr. d.Agonia|E localizada no Campo da Agonia em Viana do Castelo. Está relacionada com a tradição da Romaria de Nossa Senhora da Agonia ligada a devoçao dos pescadores, que tem lugar anualmente no mes de agosto.|08:00-12:00 / 13:00-17:00
 
 *Chaves
-@Ponte Romana
-#Tambem conhecida como ponte de Trajano, esta localiza-se em Chaves. A par do desenvolvimento das termas, constitui um dos melhores legados romanos da antiga Aquae Flaviae, que prevalece até aos nossos dias.
-$00:00-24:00
-@Castelo de Chaves
-#Em posição dominante sobre uma elevação à beira do rio Tamega, o Castelo de Chaves defendia a fronteira para travar as tentativas dos filhos da puta dos espanhois de invadirem o nosso pais.
-$09:00-16:00
-@Igreja de Santa Maria Maior
-#Durante o período romano, Chaves foi um dos mais importantes núcleos urbanos da península, tendo os registos da época das invasões suevas, citado a cidade como sede de um bispado cristao.
-$08:00-18:00
+-Ponte Romana|Tambem conhecida como ponte de Trajano, esta localiza-se em Chaves. A par do desenvolvimento das termas, constitui um dos melhores legados romanos da antiga Aquae Flaviae, que prevalece até aos nossos dias.|00:00-24:00
+-Castelo de Chaves|Em posição dominante sobre uma elevação à beira do rio Tamega, o Castelo de Chaves defendia a fronteira para travar as tentativas dos filhos da puta dos espanhois de invadirem o nosso pais.|09:00-16:00
+-Igreja de Santa Maria Maior|Durante o período romano, Chaves foi um dos mais importantes núcleos urbanos da península, tendo os registos da época das invasões suevas, citado a cidade como sede de um bispado cristao.|08:00-18:00
 
 *Braga
-@Estadio Municipal de Braga
-#Projectado pelo Arquitecto português Eduardo Souto Moura, vencedor do Prémio Pritzker em 2011, e pelo Engenheiro português Rui Furtado e conhecido por ter resultado do apoveitamento de uma antiga pedreira nas redondezas da cidade.
-$11:00-16:00
-@Se de Braga
-#Considerada como um centro de irradiação episcopal e um dos mais importantes templos do românico no país, aqui encontram-se os túmulos de Henrique de Borgonha, conde de Portugal e sua esposa, Teresa de Leão, pais de D. Afonso Henriques.
-$09:30–12:30 / 14:30–17:30
-@Avenida Central
-#Uma das principais avenidas da cidade de Braga tendo anteriormente sido conhecida por Avenida dos Combatentes. Fica situada no centro histórico da cidade.
-$00:00-24:00
-@Bom Jesus do Monte
-#Este santuário católico dedicado ao Senhor Bom Jesus constitui-se num conjunto arquitetónico-paisagístico integrado por uma igreja, um escadório, uma área de mata e um funicular(Elevador do Bom Jesus).
-$08:00-19:00
-@Santuario do Sameiro
-#Santuario mariano localizado na freguesia de Espinho, em Braga.
-$07:30-20:00
+-Estadio Municipal de Braga|Projectado pelo Arquitecto português Eduardo Souto Moura, vencedor do Prémio Pritzker em 2011, e pelo Engenheiro português Rui Furtado e conhecido por ter resultado do apoveitamento de uma antiga pedreira nas redondezas da cidade.|11:00-16:00
+-Se de Braga|Considerada como um centro de irradiação episcopal e um dos mais importantes templos do românico no país, aqui encontram-se os túmulos de Henrique de Borgonha, conde de Portugal e sua esposa, Teresa de Leão, pais de D. Afonso Henriques.|09:30–12:30 / 14:30–17:30
+-Avenida Central|Uma das principais avenidas da cidade de Braga tendo anteriormente sido conhecida por Avenida dos Combatentes. Fica situada no centro histórico da cidade.|00:00-24:00
+-Bom Jesus do Monte|Este santuário católico dedicado ao Senhor Bom Jesus constitui-se num conjunto arquitetónico-paisagístico integrado por uma igreja, um escadório, uma área de mata e um funicular(Elevador do Bom Jesus).|08:00-19:00
+-Santuario do Sameiro|Santuario mariano localizado na freguesia de Espinho, em Braga.|07:30-20:00
 
 *Aveiro
-@Ria de Aveiro
-#A ria de Aveiro é como se chama ao estuário do rio Vouga, o qual se estende pelo interior do território português, paralelamente ao mar, numa distância de 45 quilómetros.
-$10:00-18:00
-@Jardim do Rossio
-#Espaço verde situado junto à ria de Aveiro, ideal para atividades de lazer e descontração. É um jardim de bairro, pequeno e sossegado, com uma atmosfera muito típica.
-$00:00-24:00
-@Universidade
-#A Universidade de Aveiro é um estabelecimento de ensino superior público em Portugal, sedeado na cidade de Aveiro. Tem como das maior forma de reconhecimento a competição nacional Pmate, desenvolvida e dinamizada pela propia universidade.
-$08:00-20:00
-@Reserva Natural das Dunas de São Jacinto
-#Esta área protegida tem cerca de 600 hectares, foi criada em 1979 e está integrada na Zona de Protecção Especial da Ria de Aveiro com destino à protecção de habitats, flora e fauna selvagens.
-$00:00-24:00
+-Ria de Aveiro|A ria de Aveiro é como se chama ao estuário do rio Vouga, o qual se estende pelo interior do território português, paralelamente ao mar, numa distância de 45 quilómetros.|10:00-18:00
+-Jardim do Rossio|Espaço verde situado junto à ria de Aveiro, ideal para atividades de lazer e descontração. É um jardim de bairro, pequeno e sossegado, com uma atmosfera muito típica.|00:00-24:00
+-Universidade|A Universidade de Aveiro é um estabelecimento de ensino superior público em Portugal, sedeado na cidade de Aveiro. Tem como das maior forma de reconhecimento a competição nacional Pmate, desenvolvida e dinamizada pela propia universidade.|08:00-20:00
+-Reserva Natural das Dunas de São Jacinto|Esta área protegida tem cerca de 600 hectares, foi criada em 1979 e está integrada na Zona de Protecção Especial da Ria de Aveiro com destino à protecção de habitats, flora e fauna selvagens.|00:00-24:00
 
 *Los Angeles
-@Santa Monica Pier
-#O pontao tem uma entrada iconica com mais de 100 anos de existencia, sendo muito popular entre os residentes e os visitantes.No parque ha tambem um carrossel original dos anos 20, um aquário, lojas, artistas e vários restaurantes. O extremo oeste do pontao é uma localização popular para a pratica da pesca.
-$00:00-24:00
-@Hollywood Walk of Fame
-#Passeio ao longo das ruas Hollywood Boulevard e Vine Street constituído por mais de 2.000 lajes com estrelas, fazendo menção a celebridades, pela Câmara do Comércio de Hollywood, pela sua contribuicao para a indústria do entretenimento.
-$00:00-24:00
-@Observatorio Griffith
-#Está localizado no Parque Griffith e é um espaco muito procurado tanto por turistas como pelos locais. O observatório tem o total de 12.200 metros quadrados, território esse que foi doado pelo coronel Griffith dai o seu nome.
-$12:00–22:00
-@Getty Center
-#E um museu de arte da Califórnia que em 2016 recebeu mais de dois milhões de visitantes.
-$10:00-17:30
-@UCLA Campus
-#Universidade americana localizada na região de Westwood. Segunda universidade do sistema Universitario da Califórnia encontra-se no topo do ranking das universidade nos USA e está entre as melhores do mundo. 
-$08:00-20:00
+-Santa Monica Pier|O pontao tem uma entrada iconica com mais de 100 anos de existencia, sendo muito popular entre os residentes e os visitantes.No parque ha tambem um carrossel original dos anos 20, um aquário, lojas, artistas e vários restaurantes. O extremo oeste do pontao é uma localização popular para a pratica da pesca.|00:00-24:00
+-Hollywood Walk of Fame|Passeio ao longo das ruas Hollywood Boulevard e Vine Street constituído por mais de 2.000 lajes com estrelas, fazendo menção a celebridades, pela Câmara do Comércio de Hollywood, pela sua contribuicao para a indústria do entretenimento.|00:00-24:00
+-Observatorio Griffith|Está localizado no Parque Griffith e é um espaco muito procurado tanto por turistas como pelos locais. O observatório tem o total de 12.200 metros quadrados, território esse que foi doado pelo coronel Griffith dai o seu nome.|12:00–22:00
+-Getty Center|E um museu de arte da Califórnia que em 2016 recebeu mais de dois milhões de visitantes.|10:00-17:30
+-UCLA Campus|Universidade americana localizada na região de Westwood. Segunda universidade do sistema Universitario da Califórnia encontra-se no topo do ranking das universidade nos USA e está entre as melhores do mundo. |08:00-20:00
 
 *Silicon Valley
-@Googleplex
-#Complexo de edifícios que formam a sede da Google. Para alem disso dinamiza varios eventos relacionados com a programacao com o objetivo de estimular os mais novos a programar bem como descobrir novos talentos.
-$10:00-18:30
-@The Tech Museum of Innovation
-#Museu de ciência e tecnologia em Silicon Valley é considerado um dos principais museus do seu genero dos Estados Unidos
-$10:00-17:00
-@Intel Museum
-#Localizado na sede da Intel tem exibições de produtos e história da Intel, bem como tecnologia de semicondutores em geral. Está aberto ao público com entrada gratuita.
-$09:00-18:00
-@Museu da História do Computador
-#Foi fundado em 1996 em Moutain View. Dedica-se a mostrar a revolução dos computadores no mundo e o impacto que ela gerou na sociedade.
-$10:00-17:00
+-Googleplex|Complexo de edifícios que formam a sede da Google. Para alem disso dinamiza varios eventos relacionados com a programacao com o objetivo de estimular os mais novos a programar bem como descobrir novos talentos.|10:00-18:30
+-The Tech Museum of Innovation|Museu de ciência e tecnologia em Silicon Valley é considerado um dos principais museus do seu genero dos Estados Unidos|10:00-17:00
+-Intel Museum|Localizado na sede da Intel tem exibições de produtos e história da Intel, bem como tecnologia de semicondutores em geral. Está aberto ao público com entrada gratuita.|09:00-18:00
+-Museu da História do Computador|Foi fundado em 1996 em Moutain View. Dedica-se a mostrar a revolução dos computadores no mundo e o impacto que ela gerou na sociedade.|10:00-17:00
 
 *New York
-@Madison Square Garden
-#Entitulado de a "arena mais famosa do mundo", este local é palco de partidas da NBA e NHL, concertos bem como outros eventos.
-$09:30-15:00
-@Estatua da Liberdade
-#Escultura neoclássica colossal localizada na ilha da Liberdade no porto de New York, oferecida por Franca como presente pela ajuda dos americanos na 2. Grande Guerra.
-$08:30-16:00
-@Central Park
-#Grande parque dentro da cidade de Nova Iorque. Possui uma área de 843 acres e é visto como um oásis dentro da grande floresta de arranha-céus  que existe na região.
-$06:00-01:00
-@Rockefeller Center
-#Complexo de 19 edifícios comerciais que ocupam uma área de 89 000 m² entre as ruas 48th e 51st. Construído pela família Rockefeller, está localizado no centro de Midtown Manhattan.
-$00:00-24:00
-@Museu Solomon R. Guggenheim
-#Famoso pelas linhas curvas da fachada,representando a arquitetura moderna em sua forma mais orgânica. O museu abriga importante coleção de arte moderna amealhadas pelo seu fundador e pela sua sobrinha no começo do século XX com um incalculável valor artístico e monetário.
-$10:00-17:30
+-Madison Square Garden|Entitulado de a "arena mais famosa do mundo", este local é palco de partidas da NBA e NHL, concertos bem como outros eventos.|09:30-15:00
+-Estatua da Liberdade|Escultura neoclássica colossal localizada na ilha da Liberdade no porto de New York, oferecida por Franca como presente pela ajuda dos americanos na 2. Grande Guerra.|08:30-16:00
+-Central Park|Grande parque dentro da cidade de Nova Iorque. Possui uma área de 843 acres e é visto como um oásis dentro da grande floresta de arranha-céus  que existe na região.|06:00-01:00
+-Rockefeller Center|Complexo de 19 edifícios comerciais que ocupam uma área de 89 000 m² entre as ruas 48th e 51st. Construído pela família Rockefeller, está localizado no centro de Midtown Manhattan.|00:00-24:00
+-Museu Solomon R. Guggenheim|Famoso pelas linhas curvas da fachada,representando a arquitetura moderna em sua forma mais orgânica. O museu abriga importante coleção de arte moderna amealhadas pelo seu fundador e pela sua sobrinha no começo do século XX com um incalculável valor artístico e monetário.|10:00-17:30
 
 *Londres
-@Wembley
-#Com capacidade para abrigar 90.000 espectadores, é o maior estádio do Reino Unido e 2º maior estádio da Europa, sendo ultrapassado somente pelo Camp Nou, em Barcelona.
-$08:00-20:00
-@Big Ben
-#O edificio possui o segundo maior relógio de quatro faces do mundo foi construída em estilo neogótico e tem 96 metros de altura.
-$00:00-24:00
-@Palácio de Buckingham
-#O Palácio de Buckingham é a residência oficial e principal local de trabalho do Monarca do Reino Unido em Londres.O palácio é frequentemente o centro de ocasiões de estado e hospitalidade real
-$09:30-19:30
-@London Eye
-#E uma roda-gigante de observação da cidade de Londres. London Eye é considerada como um ponto turístico singular em Londres. Isso não apenas pela ousadia de seu projeto, mas também pelas dificuldades que a acompanharam desde quando foi concebida até sua inauguração.
-$10:00-20:30
-@Palácio de Westminster
-#O palácio fica situado na margem Norte do rio Tâmisa próximo de outros edifícios governamentais ao longo da Whitehall.
-$09:00-17:00
-@Madame Tussauds
-#Cadeia de museus com realistas réplicas em cera de celebridades e de ícones históricos em galerias temáticas.
-$09:00-18:00
+-Wembley|Com capacidade para abrigar 90.000 espectadores, é o maior estádio do Reino Unido e 2º maior estádio da Europa, sendo ultrapassado somente pelo Camp Nou, em Barcelona.|08:00-20:00
+-Big Ben|O edificio possui o segundo maior relógio de quatro faces do mundo foi construída em estilo neogótico e tem 96 metros de altura.|00:00-24:00
+-Palácio de Buckingham|O Palácio de Buckingham é a residência oficial e principal local de trabalho do Monarca do Reino Unido em Londres.O palácio é frequentemente o centro de ocasiões de estado e hospitalidade real|09:30-19:30
+-London Eye|E uma roda-gigante de observação da cidade de Londres. London Eye é considerada como um ponto turístico singular em Londres. Isso não apenas pela ousadia de seu projeto, mas também pelas dificuldades que a acompanharam desde quando foi concebida até sua inauguração.|10:00-20:30
+-Palácio de Westminster|O palácio fica situado na margem Norte do rio Tâmisa próximo de outros edifícios governamentais ao longo da Whitehall.|09:00-17:00
+-Madame Tussauds|Cadeia de museus com realistas réplicas em cera de celebridades e de ícones históricos em galerias temáticas.|09:00-18:00
 
 *Tokyo
-@Tokyo Tower
-#A Torre de Tóquio é uma torre de comunicação e um belveder localizado no distrito Shiba-koen em Minato, Tóquio, Japão. Com 333 metros de altura, é a segunda maior estrutura artificial do Japão
-$09:00-23:00
-@Palácio Imperial do Japão
-#Residência oficial do Imperador do Japão.
-$09:00-17:00
-@Hamarikyu Gardens
-#Parque público em Chuo. Localizado na foz do Rio Sumida o parque é um jardim paisagístico de 250.165 m² ao redor da Lagoa Shioiri, o próprio parque cercado por um fosso de água do mar preenchido pela Baía de Tóquio
-$09:00-16:30
+-Tokyo Tower|A Torre de Tóquio é uma torre de comunicação e um belveder localizado no distrito Shiba-koen em Minato, Tóquio, Japão. Com 333 metros de altura, é a segunda maior estrutura artificial do Japão|09:00-23:00
+-Palácio Imperial do Japão|Residência oficial do Imperador do Japão.|09:00-17:00
+-Hamarikyu Gardens|Parque público em Chuo. Localizado na foz do Rio Sumida o parque é um jardim paisagístico de 250.165 m² ao redor da Lagoa Shioiri, o próprio parque cercado por um fosso de água do mar preenchido pela Baía de Tóquio|09:00-16:30
 
 *Paris
-@Torre Eiffel
-#
-$
-@Arco do Triunfo
-#
-$
-@Louvre
-#
-$
-@Palacio de Versalles
-#
-$
-@
-#
-$
+-Torre Eiffel|      |
+-Arco do Triunfo|      |
+-Louvre|      |
+-Palacio de Versalles|      |
+-      |      |
 
 *Berlin
-@
-#
-$
-@
-#
-$
-@
-#
-$
+-      |      |
+-      |      |
+-      |      |
 
 *Madrid
-@
-#
-$
-@
-#
-$
-@
-#
-$
+-      |      |
+-      |      |
+-      |      |
 
 *Barcelona
-@Camp Nou
-#
-$
-@
-#
-$
-@
-#
-$
+-Camp Nou|      |
+-      |      |
+-      |      |
+
