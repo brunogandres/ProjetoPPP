@@ -4,9 +4,10 @@
 #define N 50
 #define DESCRICAO 500
 #define HORARIO   250
+
 typedef struct PdI *LPdI;
 typedef struct PdI {
-    char nome[100], descricao[DESCRICAO], horario[500];
+    char nome[100], descricao[DESCRICAO], horario[HORARIO];
     int popular;
     LPdI next;
 }Ponto_Interesse;
@@ -25,6 +26,11 @@ typedef struct prefPdi {
     LprefPdi next;
 }Ponto_Interesse_Pref;
 
+typedef struct popCidade *LPopCidade;
+typedef struct popCidade {
+    Lcidade popCidade;
+    LPopCidade next;
+}Cidades_Populares;
 
 typedef struct User *LUser;
 typedef struct User {
@@ -40,7 +46,7 @@ typedef struct User {
 
 /*cabeçalhos*/
 int menu(LUser user);
-void registo(LUser lista);
+LUser registo(LUser lista);
 LUser login(LUser lista, LUser user);
 void listar_DadosUser(LUser lista, LUser user);
 void getDataPDI(char *linha, char *pdi, char *descricao, char *horario);
@@ -86,10 +92,22 @@ LprefPdi apagar_PrefPDI(LprefPdi lista, LprefPdi apagar);
 LprefPdi adicionar_PrefPDI(LprefPdi lista, char *nome, Lcidade listaC);
 
 void alterar_DadosUser(LUser lista, LUser user);
-void imprimePop(Lcidade lista);
 
 
+Lcidade cria_lista_CidadePop(Lcidade listaC);
+void procura_lista_CIDADESPop (Lcidade lista, int chave, Lcidade *ant, Lcidade *actual);
+Lcidade insere_lista_CIDADESPop(Lcidade lista, Lcidade listaC);
+void imprime_lista_CIDADESPop (Lcidade lista);
 
+void procura_lista_PDISPop (LPdI lista, int chave, LPdI *ant, LPdI *actual);
+
+LPdI insere_lista_PDISPop(LPdI lista, Lcidade listaC);
+LPdI cria_lista_PDISPop();
+void imprime_lista_PDISPop (LPdI lista);
+void viagem(LUser user, LUser lista);
+
+
+float contadorUsers = 0;
 
 //  Main
 
@@ -97,6 +115,8 @@ int main() {
     Lcidade listaCidades;
     LUser listaUsers = NULL;//lista começa a NULL
     LprefPdi listaPrefPDIS = NULL;
+    Lcidade listaOrdenadaCidades = NULL;
+    LPdI listaOrdenadaPDIS = NULL;
     char ficheiroUsers[] = "C:\\Users\\Utilizador\\Desktop\\novo\\Dados.txt";
     char ficheiroCidades[] = "C:\\Users\\Utilizador\\Desktop\\novo\\Cidades.txt";
 
@@ -113,7 +133,7 @@ int main() {
         opcaoMenu = menu(userLogado);
         switch (opcaoMenu) {
             case 1:
-                registo(listaUsers);
+                listaUsers = registo(listaUsers);
                 break;
             case 2:
                 userLogado=login(listaUsers, userLogado);
@@ -140,7 +160,17 @@ int main() {
                 imprime_lista_CIDADES(listaCidades);
                 break;
             case 10:
-                imprimePop(listaCidades);
+                printf("\t###TAXA POPULARIDADE CIDADES###");
+                listaOrdenadaCidades = cria_lista_CidadePop(listaCidades);
+                insere_lista_CIDADESPop(listaOrdenadaCidades, listaCidades);
+                imprime_lista_CIDADESPop(listaOrdenadaCidades);
+                printf("\t\n###TAXA POPULARIDADE PDIS###\n");
+                listaOrdenadaPDIS = cria_lista_PDISPop();
+                insere_lista_PDISPop(listaOrdenadaPDIS, listaCidades);
+                //imprime_lista_PDISPop(listaOrdenadaPDIS);
+                break;
+            case 11:
+                viagem(userLogado, listaUsers);
                 break;
             case 12:
                 printf("\n*** Obrigado por usar o programa. ***");
@@ -154,6 +184,11 @@ int main() {
 
 
     grava_listaUsers_ficheiro(listaUsers, ficheiroUsers);
+    free(listaCidades);
+    free(listaUsers);
+    free(listaOrdenadaCidades);
+    free(listaOrdenadaPDIS);
+
     //DEPOIS DE GRAVAR É PRECISO FAZER O FREE DAS LISTAS
 
     //
@@ -187,24 +222,7 @@ int menu(LUser user) {
     return n;
 }
 
-/*
-void LocalPop(Lcidade lista, LUser listaU){
-    LUser l = listaU;
-    lista->popular = 0;
-    while (l) {
-        if(l->prefLocal1 != NULL) {
-            if (l->prefLocal2 != NULL) {
-                if (l->prefLocal3 != NULL)
-                    if (strcmp(l->prefLocal1->nome_cidade, l->prefLocal2->nome_cidade) == 0 || strcmp(l->prefLocal1->nome_cidade, l->prefLocal3->nome_cidade) == 0) {
-                        l->prefLocal1->popular += 1;
-                        printf("%s--->%d", l->prefLocal1->nome_cidade, l->prefLocal1->popular);
-                    }
-            }
-        }
 
-        l = l->next;
-    }
-}*/
 LUser login(LUser lista, LUser user)
 {
     char nome[N];
@@ -235,6 +253,17 @@ void alterar_DadosUser(LUser lista, LUser user){
 
 }
 
+void viagem(LUser user, LUser lista){
+    if (user == NULL) {
+        printf("Efetue o Login\n");
+    } else {
+        if (user->prefLocal2 == NULL) {
+            printf("Para gerar a viagem necessita de ter 3 locais de preferencia\n");
+        } else {
+            printf("Entrou");
+        }
+    }
+}
 
 
 
@@ -280,10 +309,12 @@ LprefPdi  getNoPrefPDI(LprefPdi lista, char *pdi){
     }
     return NULL;
 }
+
 LprefPdi apagar_PrefPDI(LprefPdi lista, LprefPdi apagar){//APAGAR NO NA LSITA DE PREFERNCIAS PDIS CASO QUEIRA REMOVER
     LprefPdi l = lista;
     LprefPdi anterior;
     if(l == apagar){
+        l->prefPdi->popular--;
         lista = lista->next;
         free(l);
         printf("PDI eliminado\n");
@@ -294,6 +325,7 @@ LprefPdi apagar_PrefPDI(LprefPdi lista, LprefPdi apagar){//APAGAR NO NA LSITA DE
     l = l->next;
     while(l != NULL){
         if(l == apagar){
+            l->prefPdi->popular--;
             anterior->next = l->next;
             free(l);
             printf("PDI eliminado\n");
@@ -322,6 +354,7 @@ LprefPdi adicionar_PrefPDI(LprefPdi lista, char *nome, Lcidade listaC){
             no = (LprefPdi) malloc(sizeof(Ponto_Interesse_Pref));
             if (no != NULL) {
                 no->prefPdi = verificaPDI;
+                no->prefPdi->popular++;
                 no->next = NULL;
 
             }
@@ -366,57 +399,58 @@ void alterar_PrefLocais(LUser lista, Lcidade listaC, LUser user) {
             printf("\nDeseja adicionar Locais? <S|N>");
             gets(resposta);
             if (strcmp(resposta, "S") == 0) {
-                printf("Introduza o novo Local Preferido: ");
-                gets(novoLocalPref);
-                aux = getNoCidade(listaC, novoLocalPref);
-                if (aux == NULL) {
-                    printf("Local inexistente");
-                    printf("\nIntroduza o novo Local Preferido: ");
+                do {
+                    printf("Introduza o novo Local Preferido: ");
                     gets(novoLocalPref);
-                    user->prefLocal1 = aux;
-                } else {
-                    user->prefLocal1 = aux;
-                }
-                printf("Introduza o novo Local Preferido: ");
-                gets(novoLocalPref);
-                aux = getNoCidade(listaC, novoLocalPref);
-                if (aux == NULL) {
-                    printf("Local inexistente");
-                    printf("\nIntroduza o novo Local Preferido: ");
+                    aux = getNoCidade(listaC, novoLocalPref);
+                    if (aux == NULL) {
+                        printf("Local inexistente\n");
+                    } else {
+                        user->prefLocal1 = aux;
+                        user->prefLocal1->popular++;
+                    }
+                } while (aux == NULL);
+                do {
+                    printf("Introduza o novo Local Preferido: ");
                     gets(novoLocalPref);
-                    user->prefLocal2 = aux;
-                } else {
-                    user->prefLocal2 = aux;
-                }
-                printf("Introduza o novo Local Preferido: ");
-                gets(novoLocalPref);
-                aux = getNoCidade(listaC, novoLocalPref);
-                if (aux == NULL) {
-                    printf("Local inexistente");
-                    printf("\nIntroduza o novo Local Preferido: ");
+                    aux = getNoCidade(listaC, novoLocalPref);
+                    if (aux == NULL) {
+                        printf("Local inexistente\n");
+                    } else {
+                        user->prefLocal2 = aux;
+                        user->prefLocal2->popular++;
+                    }
+                } while (aux == NULL);
+                do {
+                    printf("Introduza o novo Local Preferido: ");
                     gets(novoLocalPref);
-                    user->prefLocal3 = aux;
-                } else {
-                    user->prefLocal3 = aux;
-                }
+                    aux = getNoCidade(listaC, novoLocalPref);
+                    if (aux == NULL) {
+                        printf("Local inexistente\n");
+                    } else {
+                        user->prefLocal3 = aux;
+                        user->prefLocal3->popular++;
+                    }
+                } while (aux == NULL);
                 printf("***Locais preferidos atualizados***");
                 return;
             } else
                 return;
         }
-
         do {
-            printf("Qual a preferencia a alterar [1|2|3] ou [4]-Voltar:");
+            printf("Qual a preferencia a alterar [1|2|3] ou [4]- Voltar:");
             scanf("%d", &numero);
             getc(stdin);
             switch (numero) {
                 case 1:
                     aux = NULL;
-                    printf("Para eliminar prima ENTER\n");
+                    printf("**Para eliminar prima ENTER**\n");
                     do {
                         printf("Introduza o novo Local Preferido: \n");
                         gets(novoLocalPref);
+
                         if (strlen(novoLocalPref) == 0) {
+                            user->prefLocal1->popular--;
                             user->prefLocal1 = user->prefLocal2;
                             user->prefLocal2=user->prefLocal3;
                             user->prefLocal3=NULL;
@@ -429,8 +463,11 @@ void alterar_PrefLocais(LUser lista, Lcidade listaC, LUser user) {
                             }
                             else if(strcmp(novoLocalPref, user->prefLocal2->nome_cidade) == 0|| strcmp(novoLocalPref, user->prefLocal3->nome_cidade) == 0)
                                 printf("***Local ja introduzido nas preferencias***\n");
-                            else
+                            else {
+                                user->prefLocal1->popular--;
                                 user->prefLocal1 = aux;
+                                user->prefLocal1->popular++;
+                            }
 
                         }
                     } while (aux == NULL);
@@ -443,6 +480,7 @@ void alterar_PrefLocais(LUser lista, Lcidade listaC, LUser user) {
                         printf("Introduza o novo Local Preferido: \n");
                         gets(novoLocalPref);
                         if (strlen(novoLocalPref) == 0) {
+                            user->prefLocal2->popular--;
                             user->prefLocal2=user->prefLocal3;
                             user->prefLocal3=NULL;
 
@@ -454,8 +492,11 @@ void alterar_PrefLocais(LUser lista, Lcidade listaC, LUser user) {
                             }
                             else if(strcmp(novoLocalPref, user->prefLocal1->nome_cidade) == 0|| strcmp(novoLocalPref, user->prefLocal3->nome_cidade) == 0)
                                 printf("***Local ja introduzido nas preferencias***\n");
-                            else
+                            else {
+                                user->prefLocal2->popular--;
                                 user->prefLocal2 = aux;
+                                user->prefLocal2->popular++;
+                            }
 
                         }
                     } while (aux == NULL);
@@ -466,7 +507,9 @@ void alterar_PrefLocais(LUser lista, Lcidade listaC, LUser user) {
                     do {
                         printf("Introduza o novo Local Preferido: \n");
                         gets(novoLocalPref);
+
                         if (strlen(novoLocalPref) == 0) {
+                            user->prefLocal3->popular--;
                             user->prefLocal3=NULL;
 
                             break;
@@ -477,8 +520,11 @@ void alterar_PrefLocais(LUser lista, Lcidade listaC, LUser user) {
                             }
                             else if(strcmp(novoLocalPref, user->prefLocal1->nome_cidade) == 0|| strcmp(novoLocalPref, user->prefLocal2->nome_cidade) == 0)
                                 printf("***Local ja introduzido nas preferencias***\n");
-                            else
+                            else {
+                                user->prefLocal3->popular--;
                                 user->prefLocal3 = aux;
+                                user->prefLocal3->popular++;
+                            }
 
                         }
                     } while (aux == NULL);
@@ -577,7 +623,7 @@ LUser carrega_listaUsers_ficheiro(char *nomeFicheiroUsers, Lcidade listaC) {
     LUser lista=NULL;
     char linha[256];
     char pref1[100], pref2[100], pref3[100];
-    int i, contador = 0, len_frase;
+    int i,contador = 0, len_frase;
     LUser noUser = NULL;
 
     UserData tempUser; //estrutura temporaria para guardar as informacoes
@@ -593,7 +639,7 @@ LUser carrega_listaUsers_ficheiro(char *nomeFicheiroUsers, Lcidade listaC) {
 
             if (linha[0] == '*')
             {
-
+                contadorUsers++;
                 if (contador != 0)
                 {
 
@@ -774,7 +820,7 @@ void grava_listaUsers_ficheiro(LUser lista, char *nomeFicheiroUsers)
 
 
 /* REGISTO*/
-void registo(LUser lista){
+LUser registo(LUser lista){
 
     UserData user;
 
@@ -794,6 +840,7 @@ void registo(LUser lista){
     user.prefPontos = NULL;
     lista = insere_lista_USERS(lista, user);
     printf("***UTILIZADO REGISTADO COM SUCESSO***");
+    return lista;
 }
 
 void carrega_listaCidades_ficheiro(char *nomeFicheiro, Lcidade lista) {
@@ -923,7 +970,7 @@ void procura_lista_PDIS (LPdI lista, char chave[], LPdI *ant, LPdI *actual) {
 void insere_lista_PDIS (LPdI lista, char it[]) {
     LPdI no ;
     LPdI ant, inutil;
-    char pdi[N], descricao[DESCRICAO], horario[500];
+    char pdi[N], descricao[DESCRICAO], horario[HORARIO];
     getDataPDI(it, pdi, descricao, horario);
     no = (LPdI) malloc (sizeof (Ponto_Interesse));
     if (no != NULL) {
@@ -1102,10 +1149,126 @@ LprefPdi cria_lista_PrefPDIs(Lcidade listaC,  char *pdi)//cria já colocando os 
 
 }
 
-void imprimePop(Lcidade lista){
+Lcidade cria_lista_CidadePop(Lcidade listaC){
+    Lcidade aux;
+    aux = (Lcidade)malloc(sizeof(Cidades));
+
+    if(aux != NULL){
+        aux->popular = 0;
+        strcpy(aux->nome_cidade, "");
+        aux->next = NULL;
+    }
+
+    return aux;
+}
+Lcidade insere_lista_CIDADESPop(Lcidade lista, Lcidade listaC) {
+    Lcidade no = NULL;
+    Lcidade ant, inutil;
+    Lcidade l = listaC->next;
+
+    while(l != NULL) {
+        no = (Lcidade) malloc(sizeof(Cidades));//reserva espaço para o nó
+
+        if(l->popular != 0) {
+            if (no != NULL) {
+                strcpy(no->nome_cidade, l->nome_cidade);
+                no->popular = l->popular;
+                procura_lista_CIDADESPop(lista, no->popular, &ant, &inutil);
+                no->next = ant->next;
+                ant->next = no;
+            }
+            if(lista == NULL){
+                lista = no;
+            }
+        }
+
+        l = l->next;
+    }
+    return no;
+}
+void procura_lista_CIDADESPop (Lcidade lista, int chave, Lcidade *ant, Lcidade *actual) {
+    *ant = lista;
+    *actual = lista->next;
+
+    while ((*actual) != NULL && (*actual)->popular > chave) {
+        *ant = *actual;
+        *actual = (*actual)->next;
+    }
+    if ((*actual) != NULL && (*actual)->popular > chave)
+        *actual = NULL;
+}
+void imprime_lista_CIDADESPop (Lcidade lista) {
     Lcidade l = lista->next; /* Salta o header */
+                float aux;
     while (l) {
-        printf("\n%s   %d\n", l->nome_cidade, l->popular);
+        aux = l->popular / contadorUsers;
+        aux = aux * 100.0;
+        printf("\n<%s> , %.f%c", l->nome_cidade,aux, '%');
         l=l->next;
     }
 }
+
+
+LPdI cria_lista_PDISPop(){
+    LPdI aux;
+    aux = (LPdI)malloc(sizeof(Ponto_Interesse));
+    if(aux != NULL){
+        aux->popular = 0;
+        strcpy(aux->nome, "");
+        aux->next = NULL;
+    }
+    return aux;
+}
+LPdI insere_lista_PDISPop(LPdI lista, Lcidade listaC) {
+    LPdI no = NULL;
+    LPdI ant, inutil;
+    Lcidade l = listaC->next;
+    float aux;
+
+    while(l != NULL) {
+        no = (LPdI) malloc(sizeof(Ponto_Interesse));//reserva espaço para o nó
+        while (l->pontos != NULL) {
+            if (l->pontos->popular != 0) {
+                if (no != NULL) {
+                    strcpy(no->nome, l->pontos->nome);
+                    no->popular = l->pontos->popular;
+                    aux = no->popular / contadorUsers;
+                    aux = aux * 100.0;
+                    procura_lista_PDISPop(lista, no->popular, &ant, &inutil);
+                    printf("%s,   %.f%c\n", no->nome, aux, '%');
+                    no->next = ant->next;
+                    ant->next = no;
+                }
+                if(lista == NULL){
+                    lista = no;
+                }
+            }
+            l->pontos = l->pontos->next;
+        }
+
+        l = l->next;
+    }
+    return no;
+}
+void procura_lista_PDISPop (LPdI lista, int chave, LPdI *ant, LPdI *actual) {
+    *ant = lista;
+    *actual = lista->next;
+    while ((*actual) != NULL && (*actual)->popular > chave) {
+        *ant = *actual;
+        *actual = (*actual)->next;
+    }
+    if ((*actual) != NULL && (*actual)->popular > chave)
+        *actual = NULL;
+}
+/*
+void imprime_lista_PDISPop (LPdI lista) {
+    LPdI l = lista->next;
+    float aux;
+    while (l != NULL) {
+        aux = l->popular / contadorUsers;
+        aux = aux * 100.0;
+        printf("\n<%s> , %.f%c", l->nome, aux, '%');
+        l = l->next;
+    }
+}
+*/
