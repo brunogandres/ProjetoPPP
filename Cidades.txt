@@ -2,9 +2,7 @@
 -Museu Machado Castro|E um dos mais importantes museus de Belas-Artes de Portugal. Foi assim denominado em homenagem ao escultor conimbricense Machado de Castro. O seu espolio inclui importantes nucleos de escultura, pintura e Artes decorativas. Localiza-se no Largo Dr. Jose Rodrigues.|10:00-18:00
 -Parque Verde|Parque na margem do rio com quase 4 quilometros de espacos verdes que contempla tambem uma ciclovia de extensao equivalente;|00:00-24:00
 -Polo II da Universidade de Coimbra|Local onde se encontram sedeadas a maior o parte dos cursos de engenharia da UC.|08:00-20:00
--Escadas do Quebra-costas|Tratase de um ponto historico de grande simbolismo que liga o Arco da Almedina ao largo da Se-Velha.
-
-A longa escadaria, um interessante percurso que conduz locais e visitantes desde a Alta de Coimbra ate à Baixa da cidade e uma atracao que deslumbra por si so.|00:00-24:00
+-Escadas do Quebra-costas|Tratase de um ponto historico de grande simbolismo que liga o Arco da Almedina ao largo da Se-Velha.A longa escadaria, um interessante percurso que conduz locais e visitantes desde a Alta de Coimbra ate à Baixa da cidade e uma atracao que deslumbra por si so.|00:00-24:00
 -Praca da Republica|Praca central e iconica da cidade de Coimbra. Localizada perto do Polo I da Universidade de Coimbra e um local principalmente marcado pela presenca de estudantes bem como de rituais academicos|00:00-24:00
 -O Moelas|Estabelecimento de diversao noturna frequentado principalmente pelos estudantes de engenharia informatica, dado estar localizado ao lado da se velha encontra-se protegido contra qualquer forca maligna q o tente assombrar.|23:00-04:00
 
