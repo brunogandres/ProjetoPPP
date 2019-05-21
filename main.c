@@ -839,7 +839,7 @@ LUser registo(LUser lista){
     user.hot = NULL;
     user.prefPontos = NULL;
     lista = insere_lista_USERS(lista, user);
-    printf("***UTILIZADO REGISTADO COM SUCESSO***");
+    printf("***UTILIZADOR REGISTADO COM SUCESSO***");
     return lista;
 }
 
