@@ -2,7 +2,9 @@
 -Museu Machado Castro|E um dos mais importantes museus de Belas-Artes de Portugal. Foi assim denominado em homenagem ao escultor conimbricense Machado de Castro. O seu espolio inclui importantes nucleos de escultura, pintura e Artes decorativas. Localiza-se no Largo Dr. Jose Rodrigues.|10:00-18:00
 -Parque Verde|Parque na margem do rio com quase 4 quilometros de espacos verdes que contempla tambem uma ciclovia de extensao equivalente;|00:00-24:00
 -Polo II da Universidade de Coimbra|Local onde se encontram sedeadas a maior o parte dos cursos de engenharia da UC.|08:00-20:00
--Escadas do Quebra-costas|Tratase de um ponto historico de grande simbolismo que liga o Arco da Almedina ao largo da Se-Velha.A longa escadaria, um interessante percurso que conduz locais e visitantes desde a Alta de Coimbra ate à Baixa da cidade e uma atracao que deslumbra por si so.|00:00-24:00
+-Escadas do Quebra-costas|Tratase de um ponto historico de grande simbolismo que liga o Arco da Almedina ao largo da Se-Velha.
+
+A longa escadaria, um interessante percurso que conduz locais e visitantes desde a Alta de Coimbra ate a Baixa da cidade e uma atracao que deslumbra por si so.|00:00-24:00
 -Praca da Republica|Praca central e iconica da cidade de Coimbra. Localizada perto do Polo I da Universidade de Coimbra e um local principalmente marcado pela presenca de estudantes bem como de rituais academicos|00:00-24:00
 -O Moelas|Estabelecimento de diversao noturna frequentado principalmente pelos estudantes de engenharia informatica, dado estar localizado ao lado da se velha encontra-se protegido contra qualquer forca maligna q o tente assombrar.|23:00-04:00
 
@@ -23,7 +25,7 @@
 
 *Chaves
 -Ponte Romana|Tambem conhecida como ponte de Trajano, esta localiza-se em Chaves. A par do desenvolvimento das termas, constitui um dos melhores legados romanos da antiga Aquae Flaviae, que prevalece ate aos nossos dias.|00:00-24:00
--Castelo de Chaves|Em posicao dominante sobre uma elevacao à beira do rio Tamega, o Castelo de Chaves defendia a fronteira para travar as tentativas dos filhos da puta dos espanhois de invadirem o nosso pais.|09:00-16:00
+-Castelo de Chaves|Em posicao dominante sobre uma elevacao a beira do rio Tamega, o Castelo de Chaves defendia a fronteira para travar as tentativas dos filhos da puta dos espanhois de invadirem o nosso pais.|09:00-16:00
 -Igreja de Santa Maria Maior|Durante o periodo romano, Chaves foi um dos mais importantes nucleos urbanos da peninsula, tendo os registos da epoca das invasoes suevas, citado a cidade como sede de um bispado cristao.|08:00-18:00
 
 *Braga
@@ -35,9 +37,9 @@
 
 *Aveiro
 -Ria de Aveiro|A ria de Aveiro e como se chama ao estuario do rio Vouga, o qual se estende pelo interior do territorio portugues, paralelamente ao mar, numa distancia de 45 quilometros.|10:00-18:00
--Jardim do Rossio|Espaco verde situado junto à ria de Aveiro, ideal para atividades de lazer e descontracao. E um jardim de bairro, pequeno e sossegado, com uma atmosfera muito tipica.|00:00-24:00
+-Jardim do Rossio|Espaco verde situado junto a ria de Aveiro, ideal para atividades de lazer e descontracao. E um jardim de bairro, pequeno e sossegado, com uma atmosfera muito tipica.|00:00-24:00
 -Universidade|A Universidade de Aveiro e um estabelecimento de ensino superior publico em Portugal, sedeado na cidade de Aveiro. Tem como das maior forma de reconhecimento a competicao nacional Pmate, desenvolvida e dinamizada pela propria universidade.|08:00-20:00
--Reserva Natural das Dunas de Sao Jacinto|Esta area protegida tem cerca de 600 hectares, foi criada em 1979 e esta integrada na Zona de Proteccao Especial da Ria de Aveiro com destino à proteccao de habitats, flora e fauna selvagens.|00:00-24:00
+-Reserva Natural das Dunas de Sao Jacinto|Esta area protegida tem cerca de 600 hectares, foi criada em 1979 e esta integrada na Zona de Proteccao Especial da Ria de Aveiro com destino a proteccao de habitats, flora e fauna selvagens.|00:00-24:00
 
 *Los Angeles
 -Santa Monica Pier|O pontao tem uma entrada iconica com mais de 100 anos de existencia, sendo muito popular entre os residentes e os visitantes.No parque ha tambem um carrossel original dos anos 20, um aquario, lojas, artistas e varios restaurantes. O extremo oeste do pontao e uma localizacao popular para a pratica da pesca.|00:00-24:00
