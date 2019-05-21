@@ -58,7 +58,7 @@ A longa escadaria, um interessante percurso que conduz locais e visitantes desde
 -Madison Square Garden|Entitulado de a "arena mais famosa do mundo", este local e palco de partidas da NBA e NHL, concertos bem como outros eventos.|09:30-15:00
 -Estatua da Liberdade|Escultura neoclassica colossal localizada na ilha da Liberdade no porto de New York, oferecida por Franca como presente pela ajuda dos americanos na 2. Grande Guerra.|08:30-16:00
 -Central Park|Grande parque dentro da cidade de Nova Iorque. Possui uma area de 843 acres e e visto como um oasis dentro da grande floresta de arranha-ceus  que existe na regiao.|06:00-01:00
--Rockefeller Center|Complexo de 19 edificios comerciais que ocupam uma area de 89 000 m² entre as ruas 48th e 51st. Construido pela familia Rockefeller, esta localizado no centro de Midtown Manhattan.|00:00-24:00
+-Rockefeller Center|Complexo de 19 edificios comerciais que ocupam uma area de 89 000 m quadrados entre as ruas 48th e 51st. Construido pela familia Rockefeller, esta localizado no centro de Midtown Manhattan.|00:00-24:00
 -Museu Solomon R. Guggenheim|Famoso pelas linhas curvas da fachada,representando a arquitetura moderna em sua forma mais organica. O museu abriga importante colecao de arte moderna amealhadas pelo seu fundador e pela sua sobrinha no comeco do seculo XX com um incalculavel valor artistico e monetario.|10:00-17:30
 
 *Londres
@@ -72,7 +72,7 @@ A longa escadaria, um interessante percurso que conduz locais e visitantes desde
 *Tokyo
 -Tokyo Tower|A Torre de Toquio e uma torre de comunicacao e um belveder localizado no distrito Shiba-koen em Minato, Toquio, Japao. Com 333 metros de altura, e a segunda maior estrutura artificial do Japao|09:00-23:00
 -Palacio Imperial do Japao|Residencia oficial do Imperador do Japao.|09:00-17:00
--Hamarikyu Gardens|Parque publico em Chuo. Localizado na foz do Rio Sumida o parque e um jardim paisagistico de 250.165 m² ao redor da Lagoa Shioiri, o proprio parque cercado por um fosso de agua do mar preenchido pela Baia de Toquio|09:00-16:30
+-Hamarikyu Gardens|Parque publico em Chuo. Localizado na foz do Rio Sumida o parque e um jardim paisagistico de 250.165 m quadrados ao redor da Lagoa Shioiri, o proprio parque cercado por um fosso de agua do mar preenchido pela Baia de Toquio|09:00-16:30
 
 *Paris
 -Torre Eiffel|      |
