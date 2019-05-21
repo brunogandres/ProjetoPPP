@@ -73,23 +73,29 @@
 -Hamarikyu Gardens|Parque publico em Chuo. Localizado na foz do Rio Sumida o parque e um jardim paisagistico de 250.165 m quadrados ao redor da Lagoa Shioiri, o proprio parque cercado por um fosso de agua do mar preenchido pela Baia de Toquio|09:00-16:30
 
 *Paris
--Torre Eiffel|      |
--Arco do Triunfo|      |
--Louvre|      |
--Palacio de Versalles|      |
--      |      |
+-Torre Eiffel|Torre trelica de ferro do seculo XIX localizada no Champ de Mars que se tornou um icone mundial da França. A torre e o monumento pago mais visitado do mundo|09:30-23:45
+-Arco do Triunfo|Monumento construido em comemoracao as vitorias militares do Napoleao Bonaparte que sua construcao em 1806. Inaugurado em 1836 contem gravados os nomes de 128 batalhas e 558 generais|10:00-23:00
+-Museu do Louvre|O maior museu de arte do mundo e um monumento historico em Paris, França.Esta localizado na margem direita do rio Sena, no 1 arrondissement. Aproximadamente 38.000 objetos, da pre-historia ao seculo XXI, sao exibidos em uma area de 72.735 m quadrados.|09:00-18:00
+-Palacio de Versalles|Castelo real localizado na cidade de Versalhes, uma aldeia a epoca de sua construcao, mas actualmente um suburbio de Paris|09:00-17:30
+-Champs-Elysees|Prestigiada avenida de Paris. Com os seus cinemas, cafes, lojas de especialidades luxuosas e arvores de castanheiros-da-india, e uma das mais famosas ruas do mundo|00:00-24:00
 
-*Berlin
--      |      |
--      |      |
--      |      |
+*Berlim
+-Portao de Brandemburgo|Antiga porta da cidade, reconstruida no final do século XVIII como um arco neoclássico, e hoje um dos marcos mais conhecidos da Alemanha.|00:00-24:00
+-Palacio do Reichstag|Predio onde o parlamento federal da Alemanha exerce suas funcoes|08:00-00:00
+-East Side Gallery|Galeria de arte ao ar livre situada numa seccao de 1.113 metros, no lado leste do antigo muro de Berlim, que foi preservado da demolicao|00:00-24:00
+-Berliner Fernsehturm|Torre de radiodifusao localizada na Alexanderplatz, no centro de Berlim. A torre foi construida entre 1965 e 1969 pela Republica Democratica Alema, que a usou como simbolo da Berlim governada pela Republica Democratica Alema|09:00-00:00
+-Memorial do Muro de Berlim|Comemora a divisao de Berlim pelo Muro de Berlim e as mortes que ocorreram la. O monumento foi criado em 1998 pela Republica Federal da Alemanha e pelo Estado Federal de Berlim.|08:00-22:00
+-Memorial aos Judeus Mortos da Europa|Tambem conhecido por Memorial do Holocausto, e um memorial em Berlim para as vitimas do Holocausto|10:00-20:00
 
 *Madrid
--      |      |
--      |      |
--      |      |
+-Palácio Real de Madrid|Residencia oficial do Rei de Espanha, situado em Madrid, a capital espanhola. Com uma area de 135 000 m quadrados e 4318 quartos, e o maior palacio real na Europa.|10:00-20:00
+-Plaza Mayor|Praca retangular, rodeada de todos os lados de edificios de tres pisos, sendo a sua entrada apenas possivel atraves dos nove porticos. Esta praça grandiosa com uma estatua central de Felipe III e cercada por arcos cheios de cafes e restaurantes.|00:00-24:00
+-Mercado de São Miguel|Mercado coberto construido por volta de 1916 com culinaria local, iguarias e eventos num ambiente elegante.|10:00-00:00
+-Puerta de Alcala|Monumento situado na Praça da Independencia. E constituido por duas portas retangulares que ladeiam tres arcos. Foi construido em 1778 pelo rei Carlos III para servir como porta de entrada da cidade.|00:00-24:00
+-Praca de Espanha|Uma das mais importantes de Madrid de onde sai a principal avenida da cidade. Nas suas redondezas estao dois importantes edificios da capital espanhola.|00:00-24:00
 
 *Barcelona
--Camp Nou|      |
--      |      |
--      |      |
+-Camp Nou|Estadio de futebol do Futbol Club Barcelona e da Seleção Catala de Futebol, com capacidade para 99 354 e o maior estadio da Europa e um dos maiores do mundo|10:00-20:00
+-Templo Expiatorio da Sagrada Familia|Grande templo catolico da cidade de Barcelona, considerado por muitos criticos como o expoente da arquitetura modernista catala.|09:00–20:00
+-Las Ramblas|Via que liga a Praça da Catalunha ao Porto Velho, na Cidade Velha|00:00-24:00
+-Museu Picasso|Palacios medievais com uma vasta colecao de pinturas e obras-primas de influentes pintores cubistas espanhois. Foi declarado museu de interesse nacional pela Generalidade da Catalunha.|09:00-20:30
