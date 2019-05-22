@@ -88,7 +88,7 @@
 -Memorial aos Judeus Mortos da Europa|Tambem conhecido por Memorial do Holocausto, e um memorial em Berlim para as vitimas do Holocausto|10:00-20:00
 
 *Madrid
--Palácio Real de Madrid|Residencia oficial do Rei de Espanha, situado em Madrid, a capital espanhola. Com uma area de 135 000 m quadrados e 4318 quartos, e o maior palacio real na Europa.|10:00-20:00
+-Palacio Real de Madrid|Residencia oficial do Rei de Espanha, situado em Madrid, a capital espanhola. Com uma area de 135 000 m quadrados e 4318 quartos, e o maior palacio real na Europa.|10:00-20:00
 -Plaza Mayor|Praca retangular, rodeada de todos os lados de edificios de tres pisos, sendo a sua entrada apenas possivel atraves dos nove porticos. Esta praça grandiosa com uma estatua central de Felipe III e cercada por arcos cheios de cafes e restaurantes.|00:00-24:00
 -Mercado de São Miguel|Mercado coberto construido por volta de 1916 com culinaria local, iguarias e eventos num ambiente elegante.|10:00-00:00
 -Puerta de Alcala|Monumento situado na Praça da Independencia. E constituido por duas portas retangulares que ladeiam tres arcos. Foi construido em 1778 pelo rei Carlos III para servir como porta de entrada da cidade.|00:00-24:00
@@ -97,5 +97,5 @@
 *Barcelona
 -Camp Nou|Estadio de futebol do Futbol Club Barcelona e da Selecao Catala de Futebol, com capacidade para 99 354 e o maior estadio da Europa e um dos maiores do mundo|10:00-20:00
 -Templo Expiatorio da Sagrada Familia|Grande templo catolico da cidade de Barcelona, considerado por muitos criticos como o expoente da arquitetura modernista catala.|09:00–20:00
--Las Ramblas|Via que liga a Praça da Catalunha ao Porto Velho, na Cidade Velha|00:00-24:00
+-Las Ramblas|Via que liga a Praca da Catalunha ao Porto Velho, na Cidade Velha|00:00-24:00
 -Museu Picasso|Palacios medievais com uma vasta colecao de pinturas e obras-primas de influentes pintores cubistas espanhois. Foi declarado museu de interesse nacional pela Generalidade da Catalunha.|09:00-20:30
