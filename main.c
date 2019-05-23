@@ -2,152 +2,26 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#define N 50
-#define DESCRICAO 500
-#define HORARIO   250
-
-typedef struct PdI *LPdI;
-typedef struct PdI {
-    char nome[100], descricao[DESCRICAO], horario[HORARIO];
-    int popular;
-    LPdI next;
-}Ponto_Interesse;
-
-typedef struct cidade *Lcidade;
-typedef struct cidade {
-    int popular;
-    char nome_cidade[100];
-    LPdI pontos;
-    Lcidade next;
-}Cidades;
-
-typedef struct prefPdi *LprefPdi;
-typedef struct prefPdi {
-    LPdI prefPdi;
-    LprefPdi next;
-}Ponto_Interesse_Pref;
-
-typedef struct popCidade *LPopCidade;
-typedef struct popCidade {
-    Lcidade popCidade;
-    LPopCidade next;
-}Cidades_Populares;
-
-typedef struct User *LUser;
-typedef struct User {
-    char nome[N], morada[50], data_nascimento[15], telemovel[50];
-    Lcidade prefLocal1;
-    Lcidade prefLocal2;
-    Lcidade prefLocal3;
-    LprefPdi prefPontos;
-    LPdI hot;
-    LUser next;
-}UserData;
-
-typedef struct viagem {
-    Lcidade Local1;
-    Lcidade Local2;
-    Lcidade Local3;
-    LPdI Local1PDI1;
-    LPdI Local1PDI2;
-    LPdI Local1PDI3;
-    LPdI Local2PDI1;
-    LPdI Local2PDI2;
-    LPdI Local2PDI3;
-    LPdI Local3PDI1;
-    LPdI Local3PDI2;
-    LPdI Local3PDI3;
-}Viagem;
-
-/*cabeçalhos*/
-int menu(LUser user);
-LUser registo(LUser lista);
-LUser login(LUser lista, LUser user);
-void listar_DadosUser(LUser lista, LUser user);
-void getDataPDI(char *linha, char *pdi, char *descricao, char *horario);
-
-Lcidade cria_lista_CIDADES(void);
-int lista_vazia_CIDADES(Lcidade lista);
-void procura_lista_CIDADES(Lcidade lista, char *chave, Lcidade *ant, Lcidade *actual);
-Lcidade insere_lista_CIDADES(Lcidade lista, char *it);
-void imprime_lista_CIDADES(Lcidade lista);
-void carrega_listaCidades_ficheiro(char *nomeFicheiro, Lcidade lista);
-Lcidade destroi_lista_CIDADES_PDIS(Lcidade lista);
-
-LPdI cria_lista_PDIS(void);
-LPdI destroi_lista_PDIS(LPdI lista);
-int lista_vazia_PDIS(LPdI lista);
-void procura_lista_PDIS(LPdI lista, char *chave, LPdI *ant, LPdI *actual);
-void imprime_lista_PDIS(LPdI lista);
-void insere_lista_PDIS(LPdI lista, char *it);
-
-//LUser cria_lista_USERS (UserData user);
-LUser cria_lista_USERS(void);
-LUser destroi_lista_USERS(LUser lista);
-int lista_vazia_USERS(LUser lista);
-void procura_lista_USERS(LUser lista, char chave[], LUser *ant, LUser *actual);
-LUser insere_lista_USERS(LUser lista, UserData  user);
-void imprime_lista_USERS(LUser lista);
-LUser carrega_listaUsers_ficheiro(char *nomeFicheiroUsers, Lcidade listaC);
-void grava_listaUsers_ficheiro(LUser lista, char *nomeFicheiroUsers);
-
-void getUserPrefCidades(char *linha, char *pref1, char *pref2, char *pref3);
-Lcidade getNoCidade(Lcidade listaC, char *cidade);
-LPdI getNoPDI(Lcidade listaC, char *pdi);
-LUser getNoUser(LUser listaU, char *nome);
-LprefPdi  getNoPrefPDI(LprefPdi lista, char *pdi);
-
-LprefPdi cria_lista_PrefPDIs(Lcidade listaC, char *pdi);
-void imprime_lista_PrefPDIs(LprefPdi lista);
-
-
-void alterar_PDIHOT(LUser lista, Lcidade listaC, LUser user);
-void alterar_PrefPDIS(LUser lista, LUser user, Lcidade listaC);
-void alterar_PrefLocais(LUser lista, Lcidade listaC, LUser user);
-LprefPdi apagar_PrefPDI(LprefPdi lista, LprefPdi apagar);
-LprefPdi adicionar_PrefPDI(LprefPdi lista, char *nome, Lcidade listaC);
-
-void alterar_DadosUser(LUser lista, LUser user);
-
-
-Lcidade cria_lista_CidadePop(Lcidade listaC);
-void procura_lista_CIDADESPop (Lcidade lista, int chave, Lcidade *ant, Lcidade *actual);
-void insere_lista_CIDADESPop(Lcidade lista, Lcidade listaC);
-void imprime_lista_CIDADESPop (Lcidade lista);
-
-void procura_lista_PDISPop (LPdI lista, int chave, LPdI *ant, LPdI *actual);
-
-void insere_lista_PDISPop(LPdI listaPopPDIS, LPdI listaPDIS);
-LPdI cria_lista_PDISPop();
-void imprime_lista_PDISPop (LPdI lista);
-Viagem viagem(LUser user,LUser lista, Lcidade listaCPop, Lcidade listaC);
-void imprime_lista_POPULARIDADE(Lcidade lista);
-
-void procura_lista_PrefPDISPop (LprefPdi lista, int chave, LprefPdi *ant, LprefPdi *actual);
-void percorre_string(char *str);
-int verificaPDIemLista(LPdI pdi, LprefPdi lista);
-int VerificaUserLogado(LUser user);
-void imprime_Viagem(Viagem v);
+#include "Projeto.h"
 
 
 float contadorUsers = 0;
+int contadorPDISfich =0;
 
-//  Main
 
+
+//Main
 int main() {
     Lcidade listaCidades;
     LUser listaUsers = NULL;//lista começa a NULL
-    LprefPdi listaPrefPDIS = NULL;
     Lcidade listaPopularCIDADES = NULL;
-    LPdI listaPopularPDIS = NULL;
     char ficheiroUsers[] = "C:\\Users\\Utilizador\\Desktop\\novo\\Dados.txt";
     char ficheiroCidades[] = "C:\\Users\\Utilizador\\Desktop\\novo\\Cidades.txt";
     Viagem a;
-    int opcaoMenu, TotalUtilizadores = 0;
+    int opcaoMenu;
     char nome[N];
     LUser userLogado = NULL;
     listaCidades = cria_lista_CIDADES();//lista criada aqui caso seja precisa pra outras coisas
-    //listaPrefPDIS = cria_lista_PrefPDIs(listaCidades, );
     carrega_listaCidades_ficheiro(ficheiroCidades, listaCidades);
     listaUsers = carrega_listaUsers_ficheiro(ficheiroUsers, listaCidades);
 
@@ -194,7 +68,7 @@ int main() {
                     listaPopularCIDADES = cria_lista_CIDADES();
                     insere_lista_CIDADESPop(listaPopularCIDADES, listaCidades);
                     a = viagem(userLogado,listaUsers, listaPopularCIDADES, listaCidades);
-                    imprime_Viagem(a);
+                    imprime_Viagem(a, listaUsers);
                     listaPopularCIDADES = destroi_lista_CIDADES_PDIS(listaPopularCIDADES);
 
                 }
@@ -263,14 +137,21 @@ LUser login(LUser lista, LUser user)
     }
     return user;
 }
-void percorre_string(char *str){
-    int len, i;
-    len = strlen(str);
-    for(i = 0; i < len; i++){
-        if(isalpha(str[i])) {
-            printf("l ");
-        }
+
+int VerificaAlgarismos(char *str){
+    int letra = 0, numero = 0, i;
+    for (i=0; str[i]!= '\0'; i++)
+    {
+        // check for alphabets
+        if (isalpha(str[i]) != 0)
+            letra++;
+
+            // check for decimal digits
+        else if (isdigit(str[i]) != 0)
+            numero++;
     }
+    return numero;
+
 }
 
 void alterar_DadosUser(LUser lista, LUser user){
@@ -280,11 +161,17 @@ void alterar_DadosUser(LUser lista, LUser user){
         printf("Morada: ");
         gets(resposta);
         strcpy(user->morada, resposta);
-        printf("Data de Nascimento: ");
+        printf("Data de Nascimento [DD/MM/AAAA]: ");
         gets(resposta);
+
+
         strcpy(user->data_nascimento, resposta);
-        printf("Numero Telemovel: ");
-        gets(resposta);
+        do {
+            printf("Numero Telemovel: ");
+            gets(resposta);
+            printf("***Introduza um numero de telemovel valido***\n");
+        }
+        while(VerificaAlgarismos(resposta) != 9);
         strcpy(user->telemovel, resposta);
         printf("***Dados alterados com sucesso***");
 
@@ -300,6 +187,7 @@ Viagem viagem(LUser user,LUser lista, Lcidade listaCPop, Lcidade listaC){
     LUser lu = NULL;
     int continuar = 1;
     int contador = 0;
+    float aux;
 
 
     viagem.Local1 = NULL;
@@ -321,8 +209,8 @@ Viagem viagem(LUser user,LUser lista, Lcidade listaCPop, Lcidade listaC){
     } else {
         while (l != NULL && continuar) {
             if (strcmp(l->nome_cidade, user->prefLocal1->nome_cidade) == 0 ||
-            strcmp(l->nome_cidade, user->prefLocal2->nome_cidade) == 0 ||
-            strcmp(l->nome_cidade, user->prefLocal3->nome_cidade) == 0) {
+                strcmp(l->nome_cidade, user->prefLocal2->nome_cidade) == 0 ||
+                strcmp(l->nome_cidade, user->prefLocal3->nome_cidade) == 0) {
                 if (viagem.Local1 == NULL) {
                     viagem.Local1 = getNoCidade(listaCPop, l->nome_cidade);
                 } else {
@@ -359,34 +247,34 @@ Viagem viagem(LUser user,LUser lista, Lcidade listaCPop, Lcidade listaC){
         anterior = auxCidadePontos;
 
         while (auxCidadePontos && continuar) {
-                if (verificaPDIemLista(auxCidadePontos, user->prefPontos) == 1) {
-                    if (viagem.Local1PDI1 == NULL) {
-                        viagem.Local1PDI1 = getNoPDI(listaC, auxCidadePontos->nome);
+            if (verificaPDIemLista(auxCidadePontos, user->prefPontos) == 1) {
+                if (viagem.Local1PDI1 == NULL) {
+                    viagem.Local1PDI1 = getNoPDI(listaC, auxCidadePontos->nome);
+                    anterior->next = auxCidadePontos->next;
+                    free(auxCidadePontos);
+                    auxCidadePontos = anterior->next;
+                } else {
+                    if (viagem.Local1PDI2 == NULL) {
+                        viagem.Local1PDI2 = getNoPDI(listaC, auxCidadePontos->nome);
                         anterior->next = auxCidadePontos->next;
                         free(auxCidadePontos);
                         auxCidadePontos = anterior->next;
+
                     } else {
-                        if (viagem.Local1PDI2 == NULL) {
-                            viagem.Local1PDI2 = getNoPDI(listaC, auxCidadePontos->nome);
+                        if (viagem.Local1PDI3 == NULL) {
+                            viagem.Local1PDI3 = getNoPDI(listaC, auxCidadePontos->nome);
                             anterior->next = auxCidadePontos->next;
                             free(auxCidadePontos);
                             auxCidadePontos = anterior->next;
-
-                        } else {
-                            if (viagem.Local1PDI3 == NULL) {
-                                viagem.Local1PDI3 = getNoPDI(listaC, auxCidadePontos->nome);
-                                anterior->next = auxCidadePontos->next;
-                                free(auxCidadePontos);
-                                auxCidadePontos = anterior->next;
-                                continuar = 0;
-                            }
+                            continuar = 0;
                         }
                     }
                 }
-                else{
-                    anterior = auxCidadePontos;
-                    auxCidadePontos = auxCidadePontos->next;
-                }
+            }
+            else{
+                anterior = auxCidadePontos;
+                auxCidadePontos = auxCidadePontos->next;
+            }
         }
         auxCidadePontos = viagem.Local1->pontos->next; // Avançar a cabeca
         if (viagem.Local1PDI1 == NULL) {
@@ -530,9 +418,6 @@ Viagem viagem(LUser user,LUser lista, Lcidade listaCPop, Lcidade listaC){
             viagem.Local3PDI3 = getNoPDI(listaC, auxCidadePontos->nome);
         }
 
-        //percentagens
-        
-
     }
     return viagem;
 }
@@ -572,7 +457,6 @@ void alterar_PrefPDIS(LUser lista, LUser user, Lcidade listaC){
                     printf("Introduza o nome do PDI a eliminar: ");
                     gets(nome);
                     user->prefPontos = apagar_PrefPDI(user->prefPontos, getNoPrefPDI(user->prefPontos, nome));
-
                     break;
                 case 3:
                     break;
@@ -600,6 +484,7 @@ LprefPdi apagar_PrefPDI(LprefPdi lista, LprefPdi apagar){//APAGAR NO NA LSITA DE
     LprefPdi l = lista;
     LprefPdi anterior;
     if(l == apagar){
+        l->contadorPDIS--;
         l->prefPdi->popular--;
         lista = lista->next;
         free(l);
@@ -611,6 +496,7 @@ LprefPdi apagar_PrefPDI(LprefPdi lista, LprefPdi apagar){//APAGAR NO NA LSITA DE
     l = l->next;
     while(l != NULL){
         if(l == apagar){
+            l->contadorPDIS--;
             l->prefPdi->popular--;
             anterior->next = l->next;
             free(l);
@@ -641,6 +527,7 @@ LprefPdi adicionar_PrefPDI(LprefPdi lista, char *nome, Lcidade listaC){
             if (no != NULL) {
                 no->prefPdi = verificaPDI;
                 no->prefPdi->popular++;
+                no->contadorPDIS++;
                 no->next = NULL;
 
             }
@@ -834,16 +721,19 @@ void alterar_PDIHOT(LUser lista, Lcidade listaC, LUser user){
         else {
             printf("%s", user->hot->nome);
         }
-        printf("\nPDI HOT NOVO: ");
-        gets(nomeNovoHot);
-        aux = getNoPDI(listaC, nomeNovoHot);
-        if(aux == NULL){
-            printf("Ponto de Interesse inexistente");
+        do{
+            printf("\nPDI HOT NOVO: ");
+            gets(nomeNovoHot);
+            printf("[4] - SAIR\n");
+            aux = getNoPDI(listaC, nomeNovoHot);
+            if(aux == NULL){
+                printf("Ponto de Interesse inexistente");
+            }
         }
-        else {
-            user->hot = aux;
-            printf("\nPonto de Interesse HOT alterado com sucesso");
-        }
+        while(aux == NULL);
+        user->hot = aux;
+        printf("\n**Ponto de Interesse HOT alterado com sucesso**");
+
     }
 
 }
@@ -1110,7 +1000,7 @@ LUser registo(LUser lista){
     gets(user.morada);
     printf("Data de Nascimento: ");
     gets(user.data_nascimento);
-    printf("Telemovel: ");
+    printf("Numero Telemovel: ");
     gets(user.telemovel);
     user.prefLocal1 = NULL;
     user.prefLocal2 = NULL;
@@ -1142,6 +1032,7 @@ void carrega_listaCidades_ficheiro(char *nomeFicheiro, Lcidade lista) {
         }
         else {
             len = strlen(leitura);
+            contadorPDISfich++;
             if(leitura[len-1] == '\n')
                 leitura[len - 1] = '\0';
             insere_lista_PDIS(noLocal->pontos, leitura+1);
@@ -1415,10 +1306,13 @@ LprefPdi cria_lista_PrefPDIs(Lcidade listaC,  char *pdi)//cria já colocando os 
     while(token != NULL) {
         no = (LprefPdi) malloc(sizeof(Ponto_Interesse_Pref));
         if (no != NULL) {
+            no->contadorPDIS = 0;
             no->prefPdi = getNoPDI(listaC, token);
             //procura_lista_PrefPDISPop(lista, no->prefPdi->popular, &anterior, &inutil);
-            if(no->prefPdi != NULL)
+            if(no->prefPdi != NULL) {
+                no->contadorPDIS++;
                 no->prefPdi->popular++;
+            }
             no->next = NULL;
 
         }
@@ -1448,7 +1342,7 @@ void insere_lista_CIDADESPop(Lcidade lista, Lcidade listaC) {
     Lcidade l = listaC->next;
 
     while(l != NULL) {
-     //   if(l->popular != 0)
+        //   if(l->popular != 0)
         {
             no = (Lcidade) malloc(sizeof(Cidades));
             if (no != NULL) {
@@ -1505,7 +1399,7 @@ void insere_lista_PDISPop(LPdI listaPopPDIS, LPdI listaPDIS) {
     LPdI l = listaPDIS->next;
 
     while(l != NULL) {
-     //   if (l->popular != 0)
+        //   if (l->popular != 0)
         {
             no = (LPdI) malloc(sizeof(Ponto_Interesse));//reserva espaço para o nó
             if (no != NULL) {
@@ -1563,7 +1457,88 @@ void imprime_lista_POPULARIDADE(Lcidade lista){
     }
 }
 
-void imprime_Viagem(Viagem v) {
+void imprime_Viagem(Viagem v, LUser lista) {
+
+    float aux, aux1, aux2;
+    int contador = 0, contadorPrefPdisTotal = 0, contadorPrefPdisIncluidos = 0, contadorLocaisIncluidos = 0;
+    LUser lu = lista;
+    LprefPdi l = NULL;
+
+    while(lu != NULL) {
+        if(lu->hot != NULL) {
+            if ((strcmp(lu->hot->nome, v.Local1PDI1->nome) == 0) || (strcmp(lu->hot->nome, v.Local1PDI2->nome) == 0) || (strcmp(lu->hot->nome, v.Local1PDI3->nome) == 0) ||(strcmp(lu->hot->nome, v.Local2PDI1->nome) == 0) ||(strcmp(lu->hot->nome, v.Local2PDI2->nome) == 0) ||(strcmp(lu->hot->nome, v.Local2PDI3->nome) == 0) ||(strcmp(lu->hot->nome, v.Local3PDI1->nome) == 0) ||(strcmp(lu->hot->nome, v.Local3PDI2->nome) == 0) ||(strcmp(lu->hot->nome, v.Local3PDI3->nome) == 0)) {
+                contador++;
+            }
+        }
+        lu = lu->next;
+    }
+    lu = lista;
+
+
+    while(lu != NULL){
+
+        if(lu->prefPontos != NULL){
+            l = lu->prefPontos;
+            while(l){
+                contadorPrefPdisTotal++;
+                if ((strcmp(l->prefPdi->nome, v.Local1PDI1->nome) == 0)
+                || (strcmp(l->prefPdi->nome, v.Local1PDI2->nome) == 0)
+                || (strcmp(l->prefPdi->nome, v.Local1PDI3->nome) == 0)
+                ||(strcmp(l->prefPdi->nome, v.Local2PDI1->nome) == 0)
+                ||(strcmp(l->prefPdi->nome, v.Local2PDI2->nome) == 0)
+                ||(strcmp(l->prefPdi->nome, v.Local2PDI3->nome) == 0)
+                ||(strcmp(l->prefPdi->nome, v.Local3PDI1->nome) == 0)
+                ||(strcmp(l->prefPdi->nome, v.Local3PDI2->nome) == 0)
+                ||(strcmp(l->prefPdi->nome, v.Local3PDI3->nome) == 0)) {
+                    contadorPrefPdisIncluidos++;
+                }
+                l = l->next;
+            }
+
+        }
+
+        lu = lu->next;
+    }
+    //ponto1
+    lu = lista;
+    while(lu != NULL){
+        if(lu->prefLocal1 != NULL){
+            if(strcmp(lu->prefLocal1->nome_cidade, v.Local1->nome_cidade) == 0
+            || strcmp(lu->prefLocal1->nome_cidade, v.Local2->nome_cidade) == 0
+            || strcmp(lu->prefLocal1->nome_cidade, v.Local3->nome_cidade) == 0){
+                contadorLocaisIncluidos++;
+            }
+            if(lu->prefLocal2!= NULL){
+                if(strcmp(lu->prefLocal2->nome_cidade, v.Local1->nome_cidade) == 0
+                   || strcmp(lu->prefLocal2->nome_cidade, v.Local2->nome_cidade) == 0
+                   || strcmp(lu->prefLocal2->nome_cidade, v.Local3->nome_cidade) == 0){
+                    contadorLocaisIncluidos++;
+                }
+                if(lu->prefLocal3!= NULL) {
+                    if (strcmp(lu->prefLocal3->nome_cidade, v.Local1->nome_cidade) == 0
+                        || strcmp(lu->prefLocal3->nome_cidade, v.Local2->nome_cidade) == 0
+                        || strcmp(lu->prefLocal3->nome_cidade, v.Local3->nome_cidade) == 0) {
+                        contadorLocaisIncluidos++;
+                    }
+                }
+            }
+        }
+        lu = lu->next;
+    }
+
+    //pontinho1
+    aux2 = contadorLocaisIncluidos / contadorUsers;
+    aux2 = aux2 * 100;
+    //pontinho2
+    aux = contador / contadorUsers;
+    aux = aux *100.0;
+    //pontinho3
+
+    aux1 = (float)contadorPrefPdisIncluidos / contadorPrefPdisTotal;
+    aux1 = aux1 * 100.0;
+
+
+
     if (v.Local1 != NULL) {
         printf("\n############### VIAGEM GERADA ############### \n\n-- %s --> %s --> %s --\n", strupr(v.Local1->nome_cidade), strupr(v.Local2->nome_cidade), strupr(v.Local3->nome_cidade));
         printf("\nPONTOS DE INTERESSE A VISITAR:\n\n");
@@ -1578,10 +1553,14 @@ void imprime_Viagem(Viagem v) {
         printf("* %s\n", strupr(v.Local3->nome_cidade));
         printf("\t%s\n", v.Local3PDI1->nome);
         printf("\t%s\n", v.Local3PDI2->nome);
-        printf("\t%s\n",v.Local3PDI3->nome);
+        printf("\t%s\n\n",v.Local3PDI3->nome);
+        printf("PERCENTAGEM DE UTILIZADORES EM QUE O PDI HOT ESTA INCLUIDO NESTA VIAGEM: %.f%c\n",aux, '%');
+        printf("PERCENTAGEM DAS PREFERENCIAS DE PDI: %.f%c\n", aux1, '%');
+        printf("PERCENTAGEM DE UTILIZADORES QUE TEM PELO MENOS 1 LOCAL FAVORITO ENTRE OS INCLUIDOS NA VIAGEM:  %.f%c\n", aux2, '%');
+
     }
     else {
         printf("Não foi possível gerar a viagem!");
     }
-}
 
+}
